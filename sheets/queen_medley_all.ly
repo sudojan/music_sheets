@@ -14,6 +14,7 @@ global = {
 }
 
 musicOne = \relative {
+  \mark \default
   g'4 fis e d |
   e8 e4. r2 |
   g4 fis e d |
@@ -711,6 +712,17 @@ pianoDown = \relative { \clef bass
   }
 }
 
+drumsa = \drummode {
+  hc8 8 sn4 hc8 8 sn4 |
+  hc8 8 sn4 hc8 8 sn4 |
+  hc8 8 sn4 hc8 8 sn4 |
+  hc8 8 sn4 hc8 8 sn4 |
+  hc8 8 sn4 hc8 8 sn4 |
+  hc8 8 sn4 hc8 8 sn4 |
+  hc8 8 sn4 hc8 8 sn4 |
+}
+
+
 \score {
   <<
     \new Voice = "one" { \global \musicOne }
@@ -720,6 +732,7 @@ pianoDown = \relative { \clef bass
       \new Staff = "up" { \global \pianoUp }
       \new Staff = "down" { \global \pianoDown }
     >>
+    \new DrumStaff \drumsa
   >>
   \layout {
     #(layout-set-staff-size 17)
@@ -736,6 +749,7 @@ pianoDown = \relative { \clef bass
         \new Staff = "up" { \global \pianoUp }
         \new Staff = "down" { \global \pianoDown }
       >>
+      \new DrumStaff \drumsa
     >>
   }
   \midi { }

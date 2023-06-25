@@ -66,17 +66,26 @@ pianoDown = \relative { \clef bass
   c1 ~ 4
 }
 
+drumsa = \drummode {
+  hc8 8 sn4 hc8 8 sn4 |
+  hc8 8 sn4 hc8 8 sn4 |
+  hc8 8 sn4 hc8 8 sn4 |
+  hc8 8 sn4 hc8 8 sn4 |
+  hc8 8 sn4 hc8 8 sn4 |
+  hc8 8 sn4 hc8 8 sn4 |
+  hc8 8 sn4 hc8 8 sn4 |
+}
+
+
 \score {
-  \new PianoStaff <<
-    \new Staff <<
-      \new Voice = "one" {
-        \global
-        \musicOne
-      }
-      \new Lyrics \lyricsto "one" { \verseOne }
+  <<
+    \new Voice = "one" { \global \musicOne }
+    \new Lyrics \lyricsto one \verseOne
+    \new PianoStaff <<
+      \new Staff = "up" { \global \pianoUp }
+      \new Staff = "down" { \global \pianoDown }
     >>
-    \new Staff = "up" { \global \pianoUp }
-    \new Staff = "down" { \global \pianoDown }
+    \new DrumStaff \drumsa
   >>
   \layout {
     #(layout-set-staff-size 17)
@@ -85,16 +94,14 @@ pianoDown = \relative { \clef bass
 
 \score {
   \unfoldRepeats {
-    \new PianoStaff <<
-      \new Staff <<
-        \new Voice = "one" {
-          \global
-          \musicOne
-        }
-        \new Lyrics \lyricsto "one" { \verseOne }
+    <<
+      \new Voice = "one" { \global \musicOne }
+      \new Lyrics \lyricsto one \verseOne
+      \new PianoStaff <<
+        \new Staff = "up" { \global \pianoUp }
+        \new Staff = "down" { \global \pianoDown }
       >>
-      \new Staff = "up" { \global \pianoUp }
-      \new Staff = "down" { \global \pianoDown }
+      \new DrumStaff \drumsa
     >>
   }
   \midi { }
