@@ -7,7 +7,7 @@ brew install lilypond
 ```
 When applying the `.ly` file to lilypond, a pdf file and a midi file is created, e.g.
 ```sh
-lilypond queen_medley_radio_gaga.ly
+lilypond queen_medley_all.ly
 ```
 
 ### Converting midi to mp3 file
@@ -17,5 +17,5 @@ brew install timidity lame
 ```
 and then be converted with
 ```sh
-timidity queen_medley_radio_gaga.midi -Ow -o - | lame - audioOutput.mp3
+timidity queen_medley_all.midi -Ow -o - | lame - queen_medley_all.mp3
 ```
