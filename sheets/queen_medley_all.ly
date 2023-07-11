@@ -6,24 +6,24 @@
 }
 
 global = {
-  \key c \major
+  \key e \minor
   \time 4/4
   \dynamicUp
   \set melismaBusyProperties = #'()
-  \tempo 4 = 110
+  \tempo 4 = 100
 }
 
-musicOne = \relative {
+musicOne = \relative c' {
   \mark \default
-  g'4 fis e d |
-  e8 e4. r2 |
-  g4 fis e d |
-  e8 e4. r2 |
-  g4 fis e d |
-  e8 e4. r2 |
-  g4 fis e d |
+  \transpose b e { \relative c''{
+    \repeat unfold 3{
+      <d b>4 <cis a> <b g> <a e> |
+      <b fis>8 8 r4 r2 |
+    }
+    <d b>4 <cis a> <b g> <a e> |
+  } }
   \time 5/4
-  e8 e4. ~ 4 r2 |
+  <e c>8 4. ~ 4 r2 |
   % ---------------------------------------------
   \bar "||" \key f \major \mark \default \tempo 4 = 110 \time 4/4
   r1 |
@@ -32,7 +32,7 @@ musicOne = \relative {
     c4 d8 c ~ c4 r8 c |
     c4 d8 c ~ c4 r8 d |
     d4 e8 d ~ d4 r8 d |
-    d e4 d8 ~ d4 r8 g |
+    d4 e8 d ~ d4 r8 g |
     g4 f8 f ~ f4 r8 g |
     g4 f8 f ~ f4 r8 d |
     d4 d8 d ~ d4 d |
@@ -46,10 +46,10 @@ musicOne = \relative {
   f4 g8 f ~ f4 r8 c |
   f8 g4 f8( ~ f d) r d |
   f4 g8 as16( g f4) r8 f |
-  bes g4 f8 ~ f4 r8 g |
-  a g4 f8 ~ f4 r8 g |
-  a g4 f8 ~ f4 r8 d |
-  f g4 g8 ~ g4 r8 c, |
+  a4 g8 f8 ~ f4 r8 g |
+  a4 g8 f8 ~ f4 r8 g |
+  a4 g8 f8 ~ f4 r8 d |
+  f4 g8 g8 ~ g4 r8 c, |
   a'4 bes8 a ~ a4 r8 c, |
   a'4 bes8 a ~ a4 r8 c, |
   g'4 a8 g ~ g4 r8 c, |
@@ -63,12 +63,12 @@ musicOne = \relative {
     f8 f g f c r r4 |
     f4 g8 f ~ f c4 r8 |
     f f g f c r r4 |
-    f8 f g f ~ f c4 r8 |
+    f8 f g f c c4 r8 |
     g4 a8 bes ~ bes c4 d8 ~ |
     d4 r r2 |
     d4 e8 f ~ f4 r4 |
-    f2 e |
-    d e |
+    <a f c>2 <g e c> |
+    <f d c> <g e c> |
     f1 |
   }
   r1 |
@@ -95,7 +95,7 @@ musicOne = \relative {
   e,8 e e e f4 f,8 a |
   f'2. a,8( bes) |
   bes2. r4 |
-  r2 g'4 f |
+  r2 r4 bes8 c |
   d8 d4. ~ d4 r8 bes |
   c d d2 r8 c16 d |
   es8 f es d c4 c8 d |
@@ -103,12 +103,12 @@ musicOne = \relative {
   d8 d4. ~ d8 d8 d8 f |
   a8. g16 g2 g8 g |
   bes bes bes bes bes g ees d |
-  c2 as4 g |
-  g'8 g4. ~ g4 f8( g16 as |
+  c2 r4 es8 f |
+  g8 g4. ~ g4 f8( g16 as |
   g2.) g8 g16 g |
   as8 g g f f4. bes,8 |
   bes f' f g g as as bes |
-  g2 r2 |
+  \appoggiatura as8 g2 r2 |
   R1 |
   R1 |
   R1 |
@@ -117,7 +117,7 @@ musicOne = \relative {
   R1 |
   % ---------------------------------------------
   \bar "||" \key f \major \tempo 4 = 90 \mark \default
-  r2. a8 a |
+  r2. a,8 a |
   g( f4) f8 f a c f |
   e2 ~ e8 c a g |
   f2 r8 a g f |
@@ -152,16 +152,16 @@ musicOne = \relative {
   a g4. r4 r8 g |
   fis8 8 8 8 g a4 bes8 ~ |
   4. 8 8 a g f |
-  f f f f f f f g ~ |
+  f f f f f f ~ f g ~ |
   4 r r2 |
-  a,4. bes8 ~ 4 c |
+  a4. bes8 ~ 4 c |
   f4. a,8 a a g f |
   g4 a r r8 g |
-  a a c a ~ 4 r |
+  a4 c8 a ~ 4 r |
   a4. bes8 ~ 4 c |
-  f a,8 a a a g f |
-  g4 a r r8 a' |
-  a a bes a( ~ 4 d,) |
+  f4. r8 a,8 ~ a g f |
+  g4 a r r8 a |
+  a a bes a ~ 4 d, |
   bes'4. a8 ~ 8 g4. |
   bes,1 |
   bes'4. a8 ~ 8 g4. |
@@ -175,12 +175,12 @@ musicOne = \relative {
   R2. |
   \key c \major
   \repeat volta 2 {
-    c4. ~ c8 b c |
+    c'4. ~ c8 b c |
     b4 g8 ~ g4 e8 |
     a4( e8 ~ e4.) |
     r2 r8 g |
-    c4. ~ c8 d e |
-    g4 e8 ~ e a, b |
+    c4. ~ c8 d <e c> |
+    <g b,>4 <e b>8 ~ 8 a, b |
     a2. |
     R2. |
     a4. g4 a8 |
@@ -207,13 +207,13 @@ verseOne = \lyricmode {
   And ev -- ry -- thing __ _ we had to know __ _
   We learned it all __ _ from I -- nge -- borg __ _
   \set stanza = #"2. " You
-  we could fly __ _
+  _ _ _ _
   (Ing -- e -- borg)
   So don't be -- come __ _ some back -- ground noise __ _
   Be pre -- sent for __ _ _ our girls and boys __ _ _
   Who you will meet __ _ e -- ven -- tual -- ly __ _
-  And don't com -- plain, __ _ so we'll get there __ _
-  You had your times, __ _ you had your struggles, __ _
+  And don't com -- plain, __ _ we will get there __ _
+  You had good times, __ _ you had your struggles, __ _
   You've yet to have __ _ your fin -- est hour __ _
   Ing -- e -- borg (Ing -- e -- borg)
   We are here __ _ to ce -- le brate your years
@@ -231,17 +231,17 @@ verseOne = \lyricmode {
   Als ar -- mer Stu -- di, auf gehts nach Darm -- - stadt
   Mat -- he ist manch -- mal leicht, manch -- mal schwer
   Nor -- bert da, bes -- te Zeit
-  mit Ne -- wrl -- lys nach U -- S -- A
+  mit Ne -- wr -- lys nach U -- S -- A
   dann be -- ginnt die Ar -- beit für dich
   Daim -- - ler
   Doch dann, Ma -- ma, __ _ Jo -- nas ist da
   und gleich gehts nach Ka -- na -- da
   Hoch -- zeit Kutsch -- fahrt wun -- der -- bar.
-  wie -- der Ma -- ma, __ _ Ni -- na ist auch schon da
+  noch -- mal Ma -- ma, __ _ Ni -- na ist auch schon da
   mit zwei Kin -- dern macht der Um -- zug dop -- pelt Spaß
-  noch -- mal Ma -- ma, __ _ ooh __ _ _ _
+  wie -- der Ma -- ma, __ _ ooh __ _ _ _
   Mit An -- ne fah -- ren wir ans Meer
-  Es hätt' für uns so wei -- ter ge -- hen könn'n.
+  Es hätt' für uns so wei -- ter ge -- hen können.
   % ---------------------------------------------
   Wenn das Le -- ben nicht läuft so wie ge -- plant, __ _
   sind wir bei dir und steh'n dir bei __ _ _ _ _
@@ -257,25 +257,24 @@ verseOne = \lyricmode {
   Zu -- sam -- men fahrt, reist, __ _ tanzt ihr durch das gan -- ze Land.
   Lernst Rus -- sisch und __ _ Fran -- zö -- sisch __ _
   Bringst Kin -- dern was bei, __ _
-  um sie auf Le -- ben vor -- - zu -- be -- rei -- - ten.
-  Du bringst dich in der Kir -- che ein __ _
-  und bist die größ -- te Alt -- stim -- me im Gos -- pel -- - chor. __ _
+  um sie aufs Le -- ben vor -- - zu -- be -- rei -- - ten.
+  Du bringst dich in der Kir -- che ein, __ _
+  du bist die bes -- te Alt -- stim -- me im Kir -- chen -- - chor. __ _
   Nichts hält __ _ dich auf
-  wir wüns -- chen für die Zu -- kunft ei -- ne gu -- te Zeit __ _
+  wir wüns -- chen für die Zu -- kunft 'ne gu -- te Zeit __ _
   Nichts hält __ _ euch auf
-  Ihr ver -- wirkt -- licht eu -- re Träu -- me
-  _ Si -- grid und Bru -- - no
-  %und lasst al --les raus __ _ _
+  Si -- - grid und Bru -- no
+  und lasst al --les raus __ _ denn
   Nichts hält __ _ euch auf
   Nichts hält __ _ euch auf
-  ? ? ? ? ? ? ? ?
+  Ihr star -- tet jetzt rich -- tig durch __ _
   % ---------------------------------------------
-  She __ _ is the cham -- pion __ _ and friend __ _ _
+  She __ _ is the Cham -- pion __ _ and friend __ _ _
   and she'll __ _ keep on fight -- ing __ _ till the end.
-  She is the cham -- pion,
-  she is the cham -- pion,
+  She is the Cham -- pion,
+  she is the Cham -- pion,
   we are her fam -- ly
-  and she is the cham -- pion of us all. __ _
+  and she is the Cham -- pion of us all. __ _
 }
 
 verseTwo = \lyricmode {
@@ -287,16 +286,20 @@ verseTwo = \lyricmode {
   Through ups and downs __ _ in o -- ur lives __ _
   You made us laugh __ _ you made us cry __ _
   You made us feel __ _ like
+  _ _ _ _ _
+  we could fly __ _
 }
 
-pianoUp = \relative {
-  g'4 fis e d |
-  e8 e4. r2 |
-  g4 fis e d |
-  e8 e4. r2 |
-  g4 fis e d |
-  e8 e4. r2 |
-  g4 fis e d |
+pianoUp = \relative c' {
+  \transpose b e { \relative c'' {
+    <d b fis d>4 <cis a e cis> <b g d b> <cis a e cis> |
+    <d b fis d>8 8 a16 b d e <fis d b fis>4 <e cis a e> |
+    <d b fis d>4 <cis a e cis> <b g d b> <cis a e cis> |
+    <d b fis d>8 8 fis16 e d b r8 <fis' d b fis>8 r16 <e cis a e>8. |
+    <d b fis d>4 <cis a e cis> <b g d b> <cis a e cis> |
+    <d b fis d>8 8 a16 b d e <fis d b fis>4 <e cis a e> |
+    <d b fis d>4 <cis a e cis> <b g d b> <cis a e cis> |
+  } }
   \time 5/4
   <c' g e>4. c,8 e g c g e c |
   % ---------------------------------------------
@@ -308,7 +311,7 @@ pianoUp = \relative {
     c4 d8 c ~ 4 r8 c |
     c4 d8 c ~ 4 r8 d |
     d4 e8 d ~ 4 r8 d |
-    d e4 d8 ~ 4 r8 g |
+    d4 e8 d ~ 4 r8 g |
     g4 f8 f ~ 4 r8 g |
     g4 f8 f ~ 4 r8 d |
     d4 8 8 ~ 4 4 |
@@ -337,10 +340,10 @@ pianoUp = \relative {
   <f c a>4 g8 <f c a>8 ~ 4. c8 |
   <f d c> g4 <f d c>8 ~ 8 d4 8 |
   << {f4 g8 as16 g f4 r8 f} \\ {<d c>4. 8 ~ 2} >> |
-  <bes' d,>8 g4 <f d>8 ~ 4. g8 |
-  <a d,> g4 <f d>8 ~ 4. g8 |
-  <a d,> g4 <f d>8 ~ 4. d8 |
-  <f d> g4 <g d>8 ~ 4. c,8 |
+  <a' d,>4 g8 <f d>8 ~ 4. g8 |
+  <a d,>4 g8 <f d>8 ~ 4. g8 |
+  <a d,>4 g8 <f d>8 ~ 4. d8 |
+  <f d>4 g8 <g d>8 ~ 4. c,8 |
   <a' f c>4 bes8 <a f c>8 ~ 4. c,8 |
   <a' f c>4 bes8 <a f c>8 ~ 4. c,8 |
   <g' f bes,>4 a8 <g f bes>8 ~ 4. bes,8 |
@@ -355,7 +358,7 @@ pianoUp = \relative {
       f8 f g f c2 |
       <f c>4 g8 f ~ f c4. |
       f8 f g f c2 |
-      f8 f g f ~ f c4. |
+      f8 f g f c c4. |
       g4 a8 bes ~ bes c4 d8 ~ 2
     } \\ {
       a1 |
@@ -460,9 +463,9 @@ pianoUp = \relative {
   <a f c>4. <bes g d>8 ~ 4 <c a f> |
   <f d a>4. a,8 <a f> a <g d> f |
   <g f d bes>4 <a f d bes> <d bes>4 8 g, |
-  <a e bes> a c <a e bes> ~ 4 <c g e> |
+  <a e bes>4 c8 <a e bes> ~ 4 <c g e> |
   <a f c>4. <bes g d>8 ~ 4 <c a f> |
-  <f d a> <a, f>8 a <a f> a <g d> f |
+  <f d a>4. r8 <a, f>8 ~ 8 <g d> f |
   <g f d bes>4 <a f d bes> <g' d bes>4 8 a, |
   <a fis d c> a bes <a f d c> ~ 4 d, |
   <bes' g d>4. <a f d>8 ~ 8 <g d bes>4. |
@@ -499,15 +502,17 @@ pianoUp = \relative {
 }
 
 pianoDown = \relative { \clef bass
-  g4 fis e d |
-  e8 e4. r2 |
-  g4 fis e d |
-  e8 e4. r2 |
-  g4 fis e d |
-  e8 e4. r2 |
-  << { g4 fis e d | } \\ { e1 | } >>
+  \transpose b e {
+    <b b,>4 <a a,> <g g,> <a a,> |
+    <b b,>8 <b b,> r4 <g g,>4 <a a,>4 |
+    <b b,>4 <a a,> <g g,> <a a,> |
+    <b b,>8 <b b,> r4 r8 <g g,>8 r16 <a a,>8. |
+    <b b,>4 <a a,> <g g,> <a a,> |
+    <b b,>8 <b b,> r4 <g g,>8. g16 <a a,>4 |
+    <b b,>4 <a a,> <g g,> <a a,> |
+  }
   \time 5/4
-  c1 r4
+  <c c,>1 r4
   % ---------------------------------------------
   \bar "||" \key f \major \mark \default \tempo 4 = 110 \time 4/4
   << {
@@ -732,7 +737,7 @@ drumsa = \drummode {
       \new Staff = "up" { \global \pianoUp }
       \new Staff = "down" { \global \pianoDown }
     >>
-    \new DrumStaff \drumsa
+    %\new DrumStaff \drumsa
   >>
   \layout {
     #(layout-set-staff-size 17)

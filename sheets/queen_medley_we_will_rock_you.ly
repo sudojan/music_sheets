@@ -6,24 +6,22 @@
 }
 
 global = {
-  \key c \major
+  \key e \minor
   \time 4/4
   \dynamicUp
   \set melismaBusyProperties = #'()
-  \tempo 4 = 110
+  \tempo 4 = 90
 }
 
-musicOne = \relative {
-  g'4 fis e d |
-  e8 e4. r2 |
-  g4 fis e d |
-  e8 e4. r2 |
-  g4 fis e d |
-  e8 e4. r2 |
-  g4 fis e d |
+musicOne = \transpose b e {\relative c'' {
+  \repeat unfold 3{
+    <d b>4 <cis a> <b g> <a e> |
+    <b fis>8 8 r4 r2 |
+  }
+  <d b>4 <cis a> <b g> <a e> |
   \time 5/4
-  e8 e4. ~ 4 r2 |
-}
+  <b g >8 4. ~ 4 r2 |
+} }
 
 verseOne = \lyricmode {
   We will, we will rock you.
@@ -32,39 +30,29 @@ verseOne = \lyricmode {
   We will, we will rock you. __ _
 }
 
-pianoUp = \relative {
-  g'4 fis e d |
-  e8 e4. r2 |
-  g4 fis e d |
-  e8 e4. r2 |
-  g4 fis e d |
-  e8 e4. r2 |
-  g4 fis e d |
+pianoUp = \transpose b e {\relative c'' {
+  <d b fis d>4 <cis a e cis> <b g d b> <cis a e cis> |
+  <d b fis d>8 8 a16 b d e <fis d b fis>4 <e cis a e> |
+  <d b fis d>4 <cis a e cis> <b g d b> <cis a e cis> |
+  <d b fis d>8 8 fis16 e d b r8 <fis' d b fis>8 r16 <e cis a e>8. |
+  <d b fis d>4 <cis a e cis> <b g d b> <cis a e cis> |
+  <d b fis d>8 8 a16 b d e <fis d b fis>4 <e cis a e> |
+  <d b fis d>4 <cis a e cis> <b g d b> <cis a e cis> |
   \time 5/4
-  <c' g e>4. c,8 e g c g e c |
-}
+  <b g>4. %c8 e g c g e c |
+} }
 
-pianoDown = \relative { \clef bass
- << {
-    g4 fis e d |
-    e8 e4. r2 |
-    g4 fis e d |
-    e8 e4. r2 |
-    g4 fis e d |
-    e8 e4. r2 |
-    g4 fis e d |
-  } \\ {
-    e1 |
-    e |
-    e |
-    e |
-    e |
-    e |
-    e |
-  } >>
+pianoDown = \transpose b e {\relative { \clef bass
+  <b b,>4 <a a,> <g g,> <a a,> |
+  <b b,>8 <b b,> r4 <g g,>4 <a a,>4 |
+  <b b,>4 <a a,> <g g,> <a a,> |
+  <b b,>8 <b b,> r4 r8 <g g,>8 r16 <a a,>8. |
+  <b b,>4 <a a,> <g g,> <a a,> |
+  <b b,>8 <b b,> r4 <g g,>8. g16 <a a,>4 |
+  <b b,>4 <a a,> <g g,> <a a,> |
   \time 5/4
-  c1 ~ 4
-}
+  <g g,>1 ~ 4
+}}
 
 drumsa = \drummode {
   hc8 8 sn4 hc8 8 sn4 |
