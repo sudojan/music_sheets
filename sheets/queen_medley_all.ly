@@ -154,12 +154,12 @@ musicOne = \relative c' {
   4. 8 8 a g f |
   f f f f f f ~ f g ~ |
   4 r r2 |
-  a4. bes8 ~ 4 c |
-  f4. a,8 a a g f |
+  a4. bes8 ~ 4 c |  
+  <f d>4. a,8 a a g f |
   g4 a r r8 g |
   a4 c8 a ~ 4 r |
   a4. bes8 ~ 4 c |
-  f4. r8 a,8 ~ a g f |
+  <f d>4. r8 a,8 ~ a g f |
   g4 a r r8 a |
   a a bes a ~ 4 d, |
   bes'4. a8 ~ 8 g4. |
@@ -203,7 +203,7 @@ verseOne = \lyricmode {
   We will, we will rock you. __ _
   \set stanza = #"1. "
   We gat -- her here __ _ and watch your light __ _
-  You lead us through __ _ our dar -- kest night __ _
+  You lead us through __ _ our dar -- kest nights __ _
   And ev -- ry -- thing __ _ we had to know __ _
   We learned it all __ _ from I -- nge -- borg __ _
   \set stanza = #"2. " You
@@ -218,7 +218,7 @@ verseOne = \lyricmode {
   Ing -- e -- borg (Ing -- e -- borg)
   We are here __ _ to ce -- le brate your years
   Hap -- py birth -- day Mum, Hap -- py birth -- day Aunt,
-  We are here __ _ to ce -- le brate your years
+  We are here __ _ to ce -- le brate your day.
   Hap -- py birth -- day Ing -- e, six -- ty years __ _ with you __ _
   Ing -- e -- borg __ _, we all here love you.
   % ---------------------------------------------
@@ -243,8 +243,8 @@ verseOne = \lyricmode {
   Mit An -- ne fah -- ren wir ans Meer
   Es hätt' für uns so wei -- ter ge -- hen können.
   % ---------------------------------------------
-  Wenn das Le -- ben nicht läuft so wie ge -- plant, __ _
-  sind wir bei dir und steh'n dir bei __ _ _ _ _
+  Wenn das Le -- ben nicht so läuft wie ge -- plant, __ _
+  sind wir bei dir. Wir steh'n dir bei __ _ _ _ _
   Was auch kam, du ließt dich nicht __ _ um -- wer -- fen. __ _
   und Freun -- de, Fa -- mi -- - lie hiel -- ten dich __ _
   Denn nichts hält __ _ dich auf.
@@ -273,7 +273,7 @@ verseOne = \lyricmode {
   and she'll __ _ keep on fight -- ing __ _ till the end.
   She is the Cham -- pion,
   she is the Cham -- pion,
-  we are her fam -- ly
+  we are her fa -- mily
   and she is the Cham -- pion of us all. __ _
 }
 
