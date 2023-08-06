@@ -1,4 +1,4 @@
-TARGETNAME=queen_medley_all
+TARGETNAME=queen_medley_inge
 
 all: $(TARGETNAME).mp3
 
