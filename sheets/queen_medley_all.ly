@@ -2,7 +2,7 @@
 
 \header{
   title = "Inges Queen Medley"
-  composer = "Jonas, Nina Anne, Sarah Jan"
+  composer = "Jonas, Nina, Anne, Sarah, Jan"
 }
 
 global = {
