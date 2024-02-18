@@ -2,6 +2,7 @@
 
 \header{
   title = "Sekalipun aku dalam lembah kelam"
+  subtitle = "Even though I may go through dark valleys"
   composer = "Niko Njotorahardjo"
   tagline = " "
 }
@@ -14,6 +15,20 @@ global = {
   \tempo 4 = 68
 }
 \layout {indent = 0.0}
+
+chordOne = \chordmode {
+  \set noChordSymbol = " "
+  r4 c2 d:m
+  e:m f
+  c d:7
+  g1
+  c2 d:m e:m f
+  c g c1
+  f2 g c1
+  f2 g c1
+  f2 g c f
+  c g c1
+}
 
 musicOne = \relative c' {
   \partial 4 \tuplet 3/2 4 { g8 g g } |
@@ -47,6 +62,14 @@ verseOne = \lyricmode {
 }
 
 verseTwo = \lyricmode {
+  _ Ev -- en though, I'may go __ _ through dark val -- leys, I know, __ _
+  I shall not fear for you are by my side.
+  _ Ev -- en though there're times __ _ I must bat -- tle __ _ the __ _ storm __ _
+  I shall stand firm for you are by my side.
+  Je -- sus I be -- lieve __ _
+  your bles -- sing __ _ up to me __ _ I re -- cieve
+  your good -- _ ness and mer -- _ cy shall al -- ways __ _ fol -- low me _
+  Je -- sus my __ _ Lord, __ _ I be -- lieve.
 }
 
 pianoUp = \relative c' {
@@ -59,9 +82,10 @@ pianoDown = \relative { \clef bass
 
 \score {
   <<
+    \new ChordNames {\set chordChanges = ##t \chordOne}
     \new Voice = "one" { \global \musicOne }
     \new Lyrics \lyricsto one \verseOne
-    %\new Lyrics \lyricsto one \verseTwo
+    \new Lyrics \lyricsto one \verseTwo
     %\new PianoStaff <<
     %  \new Staff = "up" { \global \pianoUp }
     %  \new Staff = "down" { \global \pianoDown }
@@ -83,7 +107,7 @@ pianoDown = \relative { \clef bass
         "Auch wenn ich in einem dunklen Tal bin"
         "habe ich keine Angst, denn du bist bei mir."
         "Selbst wenn ein Taifun über mich hereinbricht"
-        "habe ich keine Angst, denn du bist an meiner Seite."
+        "bin ich nicht entmutigt, denn du bist an meiner Seite."
         " "
         "Ich glaube,"
         "Du segnest mich im Überfluss."
