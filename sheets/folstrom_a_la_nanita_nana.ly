@@ -69,7 +69,7 @@ sopranonotesunib = \relative b' {
 sopranonotesa = \relative b' {
   \repeat unfold 18 { R1 * 3/4 } |
   \key e \major
-  \repeat unfold 2 { R1 * 3/4 } |
+  %\repeat unfold 2 { R1 * 3/4 } |
   gis8 b e4 dis8 cis |
   dis4 b2 |
   cis4 b a |
@@ -87,7 +87,7 @@ sopranonotesa = \relative b' {
 sopranonotesb = \relative b' {
   \repeat unfold 18 { R1 * 3/4 } |
   \key e \major
-  \repeat unfold 2 { R1 * 3/4 } |
+  %\repeat unfold 2 { R1 * 3/4 } |
   gis8 b gis4 8 8 |
   fis4 2 |
   cis'4 b a |
@@ -117,7 +117,7 @@ altonotes = \relative c' {
   g( fis) e2 ~ |
   e r4 |
   \key e \major
-  \repeat unfold 2 { R1 * 3/4 } |
+  %\repeat unfold 2 { R1 * 3/4 } |
   e8 gis b4 8 8 |
   4 a2 |
   4 gis fis |
@@ -192,7 +192,7 @@ tenornotesunia = \relative c {
   b8 a g2 ~ |
   g r4 |
   \key e \major
-  \repeat unfold 2 { R1 * 3/4 } |
+  %\repeat unfold 2 { R1 * 3/4 } |
   b8 e e4 fis8 e |
   dis4 2 |
   e4 dis cis |
@@ -309,7 +309,7 @@ bassanotesunia = \relative c {
   e2. |
   \repeat unfold 9 { R1 * 3/4 } |
   \key e \major
-  \repeat unfold 2 { R1 * 3/4 } |
+  %\repeat unfold 2 { R1 * 3/4 } |
   e8 8 4 8 8 |
   b'4 2 |
   a4 4 4 |
@@ -418,24 +418,24 @@ basswords = \lyricmode {
   \new ChoirStaff <<
     \new Staff \with { printPartCombineTexts = ##f } <<
       \set Staff.vocalName = "Soprano"
-      \new Voice = "soprano" {\global \partCombine \sopranonotesa \sopranonotesb}
+      \new Voice = "soprano" {\global \staffHighlight "lightcoral" \partCombine \sopranonotesa \sopranonotesb}
       \new NullVoice = "sopranovoice" {\global \sopranonotesa}
       \new Lyrics \lyricsto sopranovoice \sopranowords
     >>
     \new Staff <<
       \set Staff.vocalName = "Alto"
-      \new Voice = "alto" {\global \altonotes}
+      \new Voice = "alto" {\global \staffHighlight "lightsalmon" \altonotes}
       \new Lyrics \lyricsto alto \altowords
     >>
     \new Staff \with { printPartCombineTexts = ##f } <<
       \set Staff.vocalName = "Tenor"
-      \new Voice = "tenor" {\global \partCombine \tenornotesa \tenornotesb}
+      \new Voice = "tenor" {\global \staffHighlight "lightgreen" \partCombine \tenornotesa \tenornotesb}
       \new NullVoice = "tenorvoice" {\global \tenornotesa}
       \new Lyrics \lyricsto tenorvoice \tenorwords
     >>
     \new Staff \with { printPartCombineTexts = ##f } <<
       \set Staff.vocalName = "Bass"
-      \new Voice = "bassvoi" {\global \partCombine \bassnotesa \bassnotesb}
+      \new Voice = "bassvoi" {\global \staffHighlight "lightskyblue" \partCombine \bassnotesa \bassnotesb}
       \new NullVoice = "bassvoice" {\global \bassnotesa}
       \new Lyrics \lyricsto bassvoice \basswords
     >>

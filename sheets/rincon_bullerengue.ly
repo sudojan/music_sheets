@@ -75,17 +75,17 @@ sopranonotes = \relative b' {
   \tuplet 3/2 4 {e8 g b} a8 g |
   e4. d8 |
   \tuplet 3/2 4 {e8 g b} a8 g |
-  e2 |
-  r2 |
-  r2 |
-  <b' g d>2 ~ |
-  4 r |
-  <c g e>2 ~ |
-  4 r |
-  <e b g>2 ~ |
-  2 |
-  4 r8 <d b g> |
-  <e b g> r r4 |
+  e2 \fermata |
+  %r2 |
+  %r2 |
+  %<b' g>2 ~ |
+  %4 r |
+  %<c g>2 ~ |
+  %4 r |
+  <e' b>2 ~ |
+  2 ~ |
+  4 r8 <d b> |
+  <e b> r r4 |
 }
 sopranowords = \lyricmode {
 }
@@ -156,17 +156,17 @@ altonotes = \relative b' {
   \tuplet 3/2 4 { d8 e g } e8 d |
   b4. d8 |
   \tuplet 3/2 4 { d8 e g } e8 d |
-  b2 |
-  \tuplet 3/2 2 { e4 g b } |
-  \tuplet 3/2 2 { e4 d a } |
-  b2 |
-  \tuplet 3/2 2 { g4 b d } |
-  g2 |
-  fis4 d |
-  e2 ~ |
-  e2 ~ |
-  e4 r8 d |
-  e r r4 |
+  b2 \fermata |
+  % R2 |
+  % R2 |
+  % d2 ~ |
+  % 4 r |
+  % e2 ~ |
+  % 4 r |
+  g'2 ~ |
+  2 ~ |
+  4 r8 g |
+  g r r4 |
 }
 altowords = \lyricmode {
 }
@@ -236,17 +236,23 @@ tenornotes = \relative b {
   \tuplet 3/2 4 { a8 b d } c8 a |
   g4. 8 |
   \tuplet 3/2 4 { a8 b d } c8 a |
-  g2 ~ |
-  g2 ~ |
-  g2 ~ |
-  g2 ~ |
-  g2 ~ |
-  g2 ~ |
-  g2 ~ |
-  g2 ~ |
-  g2 ~ |
-  4 r8 g |
-  g r r4 |
+  g2 \fermata |
+  %\tuplet 3/2 2 { e4 g b } |
+  %\tuplet 3/2 2 { e4 d a } |
+  %b2 |
+  %\tuplet 3/2 2 { g4 b d } |
+  %g2 |
+  %fis4 d |
+  %g2 ~ |
+  %g2 ~ |
+  %g2 ~ |
+  %g2 ~ |
+  %g2 ~ |
+  %g2 ~ |
+  <e' g,>2 ~ |
+  2 ~ |
+  4 r8 <d g,> |
+  <e g,> r r4 |
 }
 tenorwords = \lyricmode {
 }
@@ -321,13 +327,13 @@ bassnotes = \relative c {
   \tuplet 3/2 4 { d8 b g } a8 b |
   e4. 8 |
   \tuplet 3/2 4 { d8 b g } a8 b |
-  e2 |
-  r2 |
-  r2 |
-  <b g> ~ |
-  4 r |
-  c2 ~ |
-  4 r |
+  e2 \fermata |
+  %r2 |
+  %r2 |
+  %<b g> ~ |
+  %4 r |
+  %c2 ~ |
+  %4 r |
   e16 8 16 d8 d |
   e16 8 16 b4 |
   d16 8 16 b8 b |

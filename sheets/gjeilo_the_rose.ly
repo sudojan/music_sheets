@@ -8,7 +8,8 @@
 global = {
   \key e \minor
   \time 12/8
-  \tempo 4. = 60
+  %\tempo 4. = 60
+  \tempo 4. = 80
   \dynamicUp
   \set melismaBusyProperties = #'()
 }

@@ -14,31 +14,35 @@ global = {
 }
 
 sopranonotesa = \relative b' {
-  \repeat unfold 10 { R2 | }
-  cis8 16 16 e8 16 16 |
-  fis8 e16 e d8 cis16 b |
-  cis8 8 e4 |
-  d8 d cis4 |
-  cis8 16 16 e8 16 16 |
-  fis8 e16 e d8 cis16 b |
-  cis8 8 e4 |
-  d8 d cis4 |
-  b8 16 16 8 16 16 |
-  cis8 b16 b a8 gis16 fis |
-  gis8 8 b4 |
-  a8 a gis4 |
-  gis8 16 16 b8 16 16 |
-  cis8 b16 16 a8 gis16 fis |
-  gis8 8 b4 |
-  a8 8 gis4 |
-  gis8 16 16 b8 16 16 |
-  cis8 b16 16 a8 gis16 fis |
-  gis8 8 b4 |
-  a8 8 gis4 |
-  gis8 16 16 b8 16 16 |
-  cis8 b16 16 a8 gis16 fis |
-  gis8 8 b4 |
-  a8 8 gis4 |
+  R2 |
+  R2 |
+  \repeat volta 2 {
+    \repeat unfold 8 { R2 | }
+    cis8 16 16 e8 16 16 |
+    fis8 e16 e d8 cis16 b |
+    cis8 8 e4 |
+    d8 d cis4 |
+    cis8 16 16 e8 16 16 |
+    fis8 e16 e d8 cis16 b |
+    cis8 8 e4 |
+    d8 d cis4 |
+    b8 16 16 8 16 16 |
+    cis8 b16 b a8 gis16 fis |
+    gis8 8 b4 |
+    a8 a gis4 |
+    gis8 16 16 b8 16 16 |
+    cis8 b16 16 a8 gis16 fis |
+    gis8 8 b4 |
+    a8 8 gis4 |
+    gis8 16 16 b8 16 16 |
+    cis8 b16 16 a8 gis16 fis |
+    gis8 8 b4 |
+    a8 8 gis4 |
+    gis8 16 16 b8 16 16 |
+    cis8 b16 16 a8 gis16 fis |
+    gis8 8 b4 |
+    a8 8 gis4 |
+  }
   R2 |
   R2 |
   R2 |
@@ -60,28 +64,30 @@ sopranonotesa = \relative b' {
 sopranonotesb = \relative b' {
   R2 |
   R2 |
-  \repeat unfold 4 {
-    a8 16 16 cis8 16 16 |
-    d8 cis16 16 b8 a16 gis |
-    a8 a cis4 |
-    b8 b a4 |
+  \repeat volta 2 {
+    \repeat unfold 4 {
+      a8 16 16 cis8 16 16 |
+      d8 cis16 16 b8 a16 gis |
+      a8 a cis4 |
+      b8 b a4 |
+    }
+    e2 ~ |
+    2 |
+    8 8 4 |
+    8 8 4 |
+    2 ~ |
+    2 |
+    8 8 4 |
+    8 8 4 |
+    e8 16 16 gis8 16 16 |
+    a8 gis16 16 fis8 e16 d |
+    e8 e gis4 |
+    fis8 fis e4 |
+    e8 16 16 gis8 16 16 |
+    a8 gis16 16 fis8 e16 d |
+    e8 e gis4 |
+    fis8 fis e4 |
   }
-  e2 ~ |
-  2 |
-  8 8 4 |
-  8 8 4 |
-  2 ~ |
-  2 |
-  8 8 4 |
-  8 8 4 |
-  e8 16 16 gis8 16 16 |
-  a8 gis16 16 fis8 e16 d |
-  e8 e gis4 |
-  fis8 fis e4 |
-  e8 16 16 gis8 16 16 |
-  a8 gis16 16 fis8 e16 d |
-  e8 e gis4 |
-  fis8 fis e4 |
   \repeat unfold 3 {
     a8 16 16 cis8 16 16 |
     d8 cis16 16 b8 a16 gis |
@@ -98,32 +104,36 @@ sopranowords = \lyricmode {
 }
 
 altonotesa = \relative c' {
-  \repeat unfold 9 { e8 16 16 8 16 16 | }
-  8 16 16 4 |
-  8 8 4 |
-  d8 e fis4 |
-  e8 8 4 |
-  a8 e e4 |
-  8 8 4 |
-  d8 e fis4 |
-  e8 8 4 |
-  a8 e e4 |
-  2 ~ |
-  2 |
-  8 8 4 |
-  8 8 4 |
-  2 ~ |
-  2 |
-  8 8 4 |
-  8 8 4 |
-  d8 b d b |
-  d b d4 |
-  d8 b d b |
-  e e e4 |
-  d8 b d b |
-  d b d4 |
-  d8 b d b |
-  e e e4 |
+  e8 16 16 8 16 16 |
+  e8 16 16 8 16 16 |
+  \repeat volta 2 {
+    \repeat unfold 7 { e8 16 16 8 16 16 | }
+    8 16 16 4 |
+    8 8 4 |
+    d8 e fis4 |
+    e8 8 4 |
+    a8 e e4 |
+    8 8 4 |
+    d8 e fis4 |
+    e8 8 4 |
+    a8 e e4 |
+    2 ~ |
+    2 |
+    8 8 4 |
+    8 8 4 |
+    2 ~ |
+    2 |
+    8 8 4 |
+    8 8 4 |
+    d8 b d b |
+    d b d4 |
+    d8 b d b |
+    e e e4 |
+    d8 b d b |
+    d b d4 |
+    d8 b d b |
+    e e e4 |
+  }
   cis8 16 16 e8 16 16 |
   fis8 e16 16 d8 cis16 b |
   cis8 8 e4 |
@@ -144,32 +154,36 @@ altonotesa = \relative c' {
 }
 
 altonotesb = \relative c' {
-  \repeat unfold 9 { a8 16 16 8 16 16 | }
-  8 16 16 4 |
-  2 |
-  2 |
-  2 ~ |
-  2 |
-  2 |
-  2 |
-  2 ~ |
-  2 |
-  R2 |
-  R2 |
-  e'8 8 d4 |
-  cis8 8 b4 |
-  R2 |
-  R2 |
-  e8 8 d4 |
-  cis8 8 b4 |
-  e2 ~ |
-  e2 ~ |
-  e2 |
-  e8 d cis b |
-  e2 ~ |
-  e2 ~ |
-  e2 |
-  e8 d cis b |
+  a8 16 16 8 16 16 |
+  a8 16 16 8 16 16 |
+  \repeat volta 2 {
+    \repeat unfold 7 { a8 16 16 8 16 16 | }
+    8 16 16 4 |
+    2 |
+    2 |
+    2 ~ |
+    2 |
+    2 |
+    2 |
+    2 ~ |
+    2 |
+    R2 |
+    R2 |
+    e'8 8 d4 |
+    cis8 8 b4 |
+    R2 |
+    R2 |
+    e8 8 d4 |
+    cis8 8 b4 |
+    e2 ~ |
+    e2 ~ |
+    e2 |
+    e8 d cis b |
+    e2 ~ |
+    e2 ~ |
+    e2 |
+    e8 d cis b |
+  }
   \repeat unfold 14 { a8 16 16 8 16 16 | }
   8 8 4 |
   \time 3/4
@@ -180,26 +194,30 @@ altowords = \lyricmode {
 
 tenornotes = \relative e {
   \clef "G_8"
-  \repeat unfold 9 { e8 16 16 8 16 16 | }
-  8 16 16 4 |
-  \repeat unfold 7 { e8 16 16 8 16 16 | }
-  8 16 16 4 |
-  b'4 a |
-  gis2 |
-  e8 8 4 |
-  8 8 4 |
-  b'4 a |
-  gis2 |
-  e8 8 4 |
-  8 8 4 |
-  e2 ~ |
-  e2 ~ |
-  e2 ~ |
-  e2 ~ |
-  e2 ~ |
-  e2 ~ |
-  e2 ~ |
-  e2 |
+  e8 16 16 8 16 16 |
+  e8 16 16 8 16 16 |
+  \repeat volta 2 {
+    \repeat unfold 7 { e8 16 16 8 16 16 | }
+    8 16 16 4 |
+    \repeat unfold 7 { e8 16 16 8 16 16 | }
+    8 16 16 4 |
+    b'4 a |
+    gis2 |
+    e8 8 4 |
+    8 8 4 |
+    b'4 a |
+    gis2 |
+    e8 8 4 |
+    8 8 4 |
+    e2 ~ |
+    e2 ~ |
+    e2 ~ |
+    e2 ~ |
+    e2 ~ |
+    e2 ~ |
+    e2 ~ |
+    e2 |
+  }
   \repeat unfold 14 { e8 16 16 8 16 16 | }
   8 8 4 |
   \time 3/4
@@ -210,26 +228,30 @@ tenorwords = \lyricmode {
 
 bassnotes = \relative c {
   \clef bass
-  \repeat unfold 9 { a8 16 16 8 16 16 | }
-  8 16 16 4 |
-  \repeat unfold 7 { a8 16 16 8 16 16 | }
-  8 16 16 4 |
-  gis'4 fis |
-  e2 |
-  8 8 4 |
-  8 8 4 |
-  gis4 fis |
-  e2 |
-  8 8 4 |
-  8 8 4 |
-  R2 |
-  R2 |
-  R2 |
-  e8 d cis b |
-  R2 |
-  R2 |
-  R2 |
-  e8 d cis b |
+  a8 16 16 8 16 16 |
+  a8 16 16 8 16 16 |
+  \repeat volta 2 {
+    \repeat unfold 7 { a8 16 16 8 16 16 | }
+    8 16 16 4 |
+    \repeat unfold 7 { a8 16 16 8 16 16 | }
+    8 16 16 4 |
+    gis'4 fis |
+    e2 |
+    8 8 4 |
+    8 8 4 |
+    gis4 fis |
+    e2 |
+    8 8 4 |
+    8 8 4 |
+    R2 |
+    R2 |
+    R2 |
+    e8 d cis b |
+    R2 |
+    R2 |
+    R2 |
+    e8 d cis b |
+  }
   \repeat unfold 14 { a8 16 16 8 16 16 | }
   8 8 4 |
   \time 3/4
