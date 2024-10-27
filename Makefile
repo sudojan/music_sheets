@@ -1,8 +1,9 @@
 
+BUILDDIR := build/
 SRCCHOIR := sheets/choir/
-BLDCHOIR := build/choir/
+BLDCHOIR := $(BUILDDIR)/choir/
 SRCCHURCH := sheets/church/
-BLDCHURCH := build/church/
+BLDCHURCH := $(BUILDDIR)/church/
 
 all: church choir
 
@@ -47,17 +48,24 @@ $(BLDCHURCH)/%.pdf: $(SRCCHURCH)/%.ly |$(BLDCHURCH)
 	mv $*.midi $*.mp3 $*.pdf $(BLDCHURCH)
 
 
-$(BLDCHURCH): build
+$(BLDCHURCH): $(BUILDDIR)
 	mkdir -p $(BLDCHURCH)
 
-$(BLDCHOIR): build
+$(BLDCHOIR): $(BUILDDIR)
 	mkdir -p $(BLDCHOIR)
+
+
+TESTNAME=schumann_der_wassermann
+test: sheets/$(TESTNAME).ly | $(BUILDDIR)
+	lilypond sheets/$(TESTNAME).ly
+	timidity $(TESTNAME).midi -Ow -o - | lame - $(TESTNAME).mp3
+	mv $(TESTNAME).midi $(TESTNAME).mp3 $(TESTNAME).pdf $(BUILDDIR)
 
 
 FORCE:
 
-build:
-	mkdir -p build/
+$(BUILDDIR):
+	mkdir -p $(BUILDDIR)
 
 clean:
-	rm -rf build
+	rm -rf $(BUILDDIR)

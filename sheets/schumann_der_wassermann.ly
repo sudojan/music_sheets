@@ -64,7 +64,7 @@ sopranonotes = \relative b' {
 sopranowords = \lyricmode {
   Es war _ in des Mai -- en _ mil -- dem _ Glanz,
   da hiel -- ten die Jung -- _ fern von Tü -- bing -- en Tanz _.
-  Sie tanz -- _ ten und tanz -- _ -- ten wohl all -- _ _ zu -- mal
+  Sie tanz -- _ ten und tanz -- _ ten wohl all -- _ _ zu -- mal
   um ei -- ne Lin -- _ de im grü -- nen Thal.
   Ein frem -- _ der _ Jüng -- ling, in stol -- zem _ Kleid,
   sich wand -- te bald zu _ der schön -- sten Maid, _
