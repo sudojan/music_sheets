@@ -2,13 +2,14 @@
 
 \header{
   title = "Von guten Mächten wunderbar geborgen"
-  subtitle = "By gentle powers lovingly surrounded"
+  %subtitle = "By gentle powers lovingly surrounded"
   composer = "Dietrich Bonhoeffer / Siegfried Fietz"
   tagline = " "
 }
 
 global = {
-  \key d \major
+  %\key d \major
+  \key c \major
   \time 6/8
   \dynamicUp
   \set melismaBusyProperties = #'()
@@ -17,9 +18,9 @@ global = {
 }
 \layout {indent = 0.0}
 
-chordOne = \chordmode {
+chordOned = \chordmode {
   \set noChordSymbol = " "
-  r4 d2. a:7 b:m b:m
+  r8 d2. a:7 b:m b:m
   g d a:7 r
   d a:7 b:m b:m
   g d4. a:7 d2.
@@ -29,53 +30,113 @@ chordOne = \chordmode {
   g a4.:7 g d2.
 }
 
-musicOne = \relative c' {
-  \partial4 a4 |
+chordOne = \chordmode {
+  \set noChordSymbol = " "
+  r8 c2. g:7 a:m a:m
+  f c g:7 g:7
+  c g:7 a:m a:m
+  f c4. g:7 c2.
+  r c g:7 a:m
+  a:m f f g:7 g:7
+  c g:7 a:m a:m
+  f g4.:7 f c2.
+}
+
+musicOned = \relative c' {
+  \partial8 a8 |
   d4 8 4 8 |
   e4 8 fis4 e8 |
-  e4. d4. |
-  r2 r8 d |
+  e4. d4. ~ |
+  4. r4 d8 |
   g4 8 4 8 |
   4 fis8 e4 d8 |
-  e2. |
-  r2 r8 a, |
+  e2. ~ |
+  4. r4 a,8 |
   d4 8 4 8 |
   e4 8 fis4 e8 |
-  e4. d4. |
-  r2 r8 fis |
+  e4. d4. ~ |
+  4. ~ 8 r8 fis |
   g4 8 4 8 |
   fis4 8 e4 8 |
   d2. | \bar "||"
   r2^\markup{\bold \huge Refrain} r8 fis |
   a4 8 4 8 |
   4 g8 fis4 e8 |
-  d4. d |
-  r4 fis8 g4 a8 |
+  d4. d ~ |
+  4 fis8 g4 a8 |
   b4 8 4. |
   r4 a8 g4 fis8 |
-  e2.
-  r2 r8 fis |
+  e2. ~
+  4. r4 fis8 |
   fis4 a8 4 fis8 |
   a4 g8 fis4 e8 |
-  d4. d |
-  r2 r8 d |
+  d4. d ~ |
+  4. ~ 8 r8 d |
   d4 8 e4 fis8 |
   e4 d8 b4 d8 |
   d2. |
 }
+musicOnec = \transpose d c {\musicOned}
 
-verseOne = \lyricmode {
-  Von gu -- ten Mäch -- ten treu und still um -- ge -- ben,
-  be -- hü -- tet und ge -- trös -- tet wun -- der -- bar,
-  so will ich die -- se Ta -- ge mit euch le -- ben
-  und mit euch ge -- hen in ein neu -- es Jahr.
-  Von gu -- ten Mäch -- ten wun -- der -- bar ge -- bor -- gen
-  er -- war -- ten wir ge -- trost, was kom -- men mag.
-  Gott ist bei uns am A -- bend und am Mor -- gen
-  und ganz ge -- wiss an je -- dem neu -- en Tag.
+musicOne = \relative c' {
+  \partial8 g8 |
+  c4 8 4 8 |
+  d4 8 e4 d8 |
+  d4. c4. ~ |
+  4. r4 c8 |
+  f4 8 4 8 |
+  4 e8 d4 c8 |
+  d2. ~ |
+  4. r4 g,8 |
+  c4 8 4 8 |
+  d4 8 e4 d8 |
+  d4. c4. ~ |
+  4. ~ 8 r8 e |
+  f4 8 4 8 |
+  e4 8 d4 8 |
+  c2. | \bar "||"
+  r2^\markup{\bold \huge Refrain} r8 e |
+  g4 8 4 8 |
+  4 f8 e4 d8 |
+  c4. 4. ~ |
+  4 e8 f4 g8 |
+  a4 8 4. |
+  r4 g8 f4 e8 |
+  d2. ~ |
+  4. r4 e8 |
+  e4 g8 4 e8 |
+  g4 f8 e4 d8 |
+  c4. 4. ~ |
+  4. ~ 8 r8 c |
+  c4 8 d4 e8 |
+  d4 c8 a4 c8 |
+  c2. |
 }
 
-verseTwo = \lyricmode {
+verseOne = \lyricmode { \set stanza = #"1. "
+  Von gu -- ten Mäch -- ten treu und still um -- ge -- ben, __ _
+  be -- hü -- tet und ge -- trös -- tet wun -- der -- bar, __ _
+  so will ich die -- se Ta -- ge mit euch le -- ben __ _ _
+  und mit euch ge -- hen in ein neu -- es Jahr.
+  Von gu -- ten Mäch -- ten wun -- der -- bar ge -- bor -- gen __ _
+  er -- war -- ten wir ge -- trost, was kom -- men mag. __ _
+  Gott ist bei uns am A -- bend und am Mor -- gen __ _ _
+  und ganz ge -- wiss an je -- dem neu -- en Tag.
+}
+verseFour = \lyricmode { \set stanza = #"4. "
+  Doch willst du uns noch ein -- mal Freu -- de schen -- ken, __ _
+  an die -- ser Welt und ih -- rer Son -- ne Glanz, __ _
+  dann woll'n wir des Ver -- gan -- ge -- nen ge -- den -- ken __ _ _
+  und dann ge -- hört dir un -- ser Le -- ben ganz.
+}
+verseSix = \lyricmode { \set stanza = #"6. "
+  Wenn sich die Stil -- le nun tief in uns brei -- tet, __ _
+  so lass uns hö -- ren je -- nen vol -- len Klang, __ _
+  der Welt, die un -- sicht -- bar sich um uns wei -- tet, __ _ _
+  all dei -- ner Kin -- der ho -- hen Lob -- ge -- sang.
+}
+
+verseOneEnglish = \lyricmode {
   (Sur -- roun -- ded by such true and gen -- tle po -- wers.
   So won -- drous -- ly con -- soled and with -- out fear,
   Thus will I spend with you these fi -- nal ho -- urs
@@ -96,10 +157,11 @@ pianoDown = \relative { \clef bass
 
 \score {
   <<
-    %\new ChordNames {\set chordChanges = ##t \chordOne}
-    \new Voice = "one" { \global \musicOne }
+    \new ChordNames {\set chordChanges = ##t \chordOne}
+    \new Voice = "one" { \global \musicOnec }
     \new Lyrics \lyricsto one \verseOne
-    \new Lyrics \lyricsto one \verseTwo
+    \new Lyrics \lyricsto one \verseFour
+    \new Lyrics \lyricsto one \verseSix
     %\new PianoStaff <<
     %  \new Staff = "up" { \global \pianoUp }
     %  \new Staff = "down" { \global \pianoDown }
@@ -111,8 +173,32 @@ pianoDown = \relative { \clef bass
   \midi{}
 }
 
+versrefraintext = \lyricmode{
+Von guten Mächten wunderbar geborgen
+erwarten wir getrost, was kommen mag.
+Gott ist bei uns am Abend und am Morgen
+und ganz gewiss an jedem neuen Tag.
+}
+versonetext = \lyricmode{
+Von guten Mächten treu und still umgeben,
+behütet und getröstet wunderbar,
+so will ich diese Tage mit euch leben
+und mit euch gehen in ein neues Jahr.
+}
+versfourtext = \lyricmode{
+Doch willst du uns noch einmal Freude schenken,
+an dieser Welt und ihrer Sonne Glanz,
+dann woll'n wir des Vergangenen gedenken
+und dann gehört dir unser Leben ganz.
+}
+verssixtext = \lyricmode{
+Wenn sich die Stille nun tief in uns breitet,
+so lass uns hören jenen vollen Klang,
+der Welt, die unsichtbar sich um uns weitet,
+all deiner Kinder hohen Lobgesang.
+}
 
-\markup{
+verstextthreefive = \markup{
   \fill-line {
     \column{
       \left-align {
@@ -146,4 +232,3 @@ pianoDown = \relative { \clef bass
     }
   }
 }
-
