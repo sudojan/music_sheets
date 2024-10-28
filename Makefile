@@ -19,14 +19,17 @@ choir: $(BLDCHOIR)bittrich_festejo_de_navidad.pdf \
 	$(BLDCHOIR)gjeilo_northern_lights.pdf \
 	$(BLDCHOIR)gjeilo_the_rose.pdf \
 	$(BLDCHOIR)jansons_ai_nama_mamina.pdf \
+	$(BLDCHOIR)kleeb_encontros_do_brasil.pdf \
 	$(BLDCHOIR)kreek_onnis_on_inimene.pdf \
+	$(BLDCHOIR)mence_kurtu_biji.pdf \
 	$(BLDCHOIR)nordqvist_jul_jul.pdf \
 	$(BLDCHOIR)rachmaninov_bogoroditse_devo.pdf \
 	$(BLDCHOIR)rheinberger_der_strom.pdf \
 	$(BLDCHOIR)rincon_bullerengue.pdf \
 	$(BLDCHOIR)sisask_sind_tervitan.pdf \
 	$(BLDCHOIR)sisask_taevainglid_kiitke_issandat.pdf \
-	$(BLDCHOIR)tormis_lase_kiik_kaia.pdf
+	$(BLDCHOIR)tormis_lase_kiik_kaia.pdf \
+	$(BLDCHOIR)zhilinski_krai_rodnoi.pdf
 
 church: $(BLDCHURCH)grosser_gott_wir_loben_dich.pdf \
 	$(BLDCHURCH)herr_dein_blut.pdf \
