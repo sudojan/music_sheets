@@ -11,6 +11,7 @@ all: choir church
 choir: $(BLDCHOIR)bittrich_festejo_de_navidad.pdf \
 	$(BLDCHOIR)brewer_o_re_mi.pdf \
 	$(BLDCHOIR)busto_ave_maria.pdf \
+	$(BLDCHOIR)croo_coventry_carol.pdf \
 	$(BLDCHOIR)eriksson_to_the_mothers_in_brazil.pdf \
 	$(BLDCHOIR)fjellheim_dona_nobis_pacem.pdf \
 	$(BLDCHOIR)fjellheim_eatnemen_vuelie.pdf \
@@ -19,7 +20,10 @@ choir: $(BLDCHOIR)bittrich_festejo_de_navidad.pdf \
 	$(BLDCHOIR)gjeilo_northern_lights.pdf \
 	$(BLDCHOIR)gjeilo_the_rose.pdf \
 	$(BLDCHOIR)jansons_ai_nama_mamina.pdf \
+	$(BLDCHOIR)kleeb_canto_a_iemanja.pdf \
 	$(BLDCHOIR)kleeb_encontros_do_brasil.pdf \
+	$(BLDCHOIR)kleeb_na_bahia_tem.pdf \
+	$(BLDCHOIR)kleeb_o_cirandeiro.pdf \
 	$(BLDCHOIR)kreek_onnis_on_inimene.pdf \
 	$(BLDCHOIR)mence_kurtu_biji.pdf \
 	$(BLDCHOIR)nordqvist_jul_jul.pdf \
