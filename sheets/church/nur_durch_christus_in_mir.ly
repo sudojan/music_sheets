@@ -7,7 +7,7 @@
 }
 
 global = {
-  \key a \major
+  \key c \major
   \time 4/4
   \dynamicUp
   \set melismaBusyProperties = #'()
@@ -19,30 +19,30 @@ global = {
 chordOne = \chordmode {
   \set noChordSymbol = " "
   r1
-  a d a e
-  a d a2 e a1
-  d a d2 a e1
-  a2 b:m a/cis d
-  a e a1
+  c f c g
+  c f c2 g c1
+  f c f2 c g1
+  c2 d:m c/e f
+  c g c1
 }
 
 musicOne = \relative c' {
-  r2 r8 a a cis |
-  4. 8 8 b b a |
-  4 fis r8 a a cis |
-  4. 8 8 a e' cis |
-  b2 r8 a a cis |
-  4. 8 8 b b a |
-  4 fis r8 a a cis |
-  4. 8 8 b b8. a16 |
-  2 r8 cis cis fis |
-  4. 8 8 e e d |
-  cis( e) e4 r a8 gis |
-  fis4. e8 8 8 8 cis |
-  b2 r4 cis8 b |
-  a4 8 b8 4 8 cis |
-  4 a'8 gis fis4 e8 d |
-  cis4 a8 b8 4 8 a |
+  r2 r8 c c e |
+  4. 8 8 d d c |
+  4 a r8 c c e |
+  4. 8 8 c g' e |
+  d2 r8 c c e |
+  4. 8 8 d d c |
+  4 a r8 c c e |
+  4. 8 8 d d8. c16 |
+  2 r8 e e a |
+  4. 8 8 g g f |
+  e( g) g4 r c8 b |
+  a4. g8 8 8 8 e |
+  d2 r4 e8 d |
+  c4 8 d8 4 8 e |
+  4 c'8 b a4 g8 f |
+  e4 c8 d8 4 8 c |
   1 |
 }
 
