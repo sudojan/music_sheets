@@ -11,13 +11,16 @@ global = {
   \time 4/4
   \dynamicUp
   \set melismaBusyProperties = #'()
-  \tempo 4 = 150
+  \tempo 4 = 170
   \set Score.rehearsalMarkFormatter = #format-mark-box-numbers
 }
 \layout {indent = 0.0}
 
 chordOne = \chordmode {
   \set noChordSymbol = " "
+  c1 c g c f g c
+  c2 f/c c1 c2 f/c c1
+  c c g g:7 c c c2 g c1
 }
 
 musicOne = \relative c'' {

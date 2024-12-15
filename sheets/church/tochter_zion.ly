@@ -18,6 +18,10 @@ global = {
 
 chordOne = \chordmode {
   \set noChordSymbol = " "
+  c1 c g2. c4 g1
+  c c g4 c g2 c1
+  c g2:7 a:m d4:m a:m g:7 a:m e1
+  a:m d e4:m c d2 g1
 }
 
 musicOne = \relative c'' {
