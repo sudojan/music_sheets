@@ -143,16 +143,16 @@ pianoUp = \relative c' {
   <gis' e b>4 <fis e>4 <gis e>2 |
   <dis b fis>8. <e b gis>16 ~ 16 8. <dis b fis>4 r |
   <cis fis, cis>4 <b fis>4 <ais cis,>2 |
-  <b gis dis>4 <dis b gis> <gis dis b> <ais fis dis ais> |
+  <b gis dis>4 <dis b gis> <gis dis b> <fis dis ais> |
   <gis e b e,>8 16 16 ~ 16 <fis e b e,>8. <gis e b e,>2 |
-  <fis cis ais fis>2 <dis gis, dis>4 <cis fis, cis> |
+  <fis cis ais fis>2 <dis gis, dis>4 <cis ais fis> |
   <b e,>4 r <cis ais fis>8. <b fis>16 ~ 16 <ais fis>8. |
   r8 fis16 b8 cis8. dis2 |
   r8 fis,16 b8 cis8 fis,16 dis'4. r16 fis |
   gis16 b, e gis16 ~ 16 fis16 b, dis16 ~ 16 b16 dis fis16 ~ 8 dis16 b |
   <cis ais>8 <b gis>16 <cis ais>16 ~ 16 <dis b>8. <b gis>8. cis16 dis cis dis e |
   <gis e>16 b, e <gis e>16 ~ 16 <fis dis>16 b, <dis b>16 ~ 16 b16 dis <fis dis>16 ~ 8. <gis b,>16 |
-  <ais fis cis ais>8 <gis fis b, gis>16 <ais fis cis ais> ~ 16 <b fis dis b>8. <ais fis cis ais>4. fis16 16 |
+  <ais fis cis>8 <gis fis b,>16 <ais fis cis> ~ 16 <b fis dis>8. <ais fis cis>4. fis16 16 |
   <gis e>16 b, e <gis e> ~ 16 <ais e>8  <b dis,>16 ~ 16 <fis b,>8 <b dis,>16 ~ 8 <fis b,>16 <fis dis> |
   <ais fis>8 <gis fis>16  <ais fis>16 ~ 16 <b fis cis>8. <gis dis b>4 <fis cis ais> |
   <e b e,> r4 <cis ais fis>8. <b fis>16 ~ 16 <ais fis>8. |
@@ -162,11 +162,11 @@ pianoUp = \relative c' {
   %r8 e16 fis8 gis b16 ~ 2 |
   %r8 fis16 cis8 dis e16 ~ 2 |
 
-  <b gis e>4. r8 <cis ais fis>8. <b fis>16 ~ 16 <ais fis>8. |
+  <b gis e>2 <cis ais fis>8. <b fis>16 ~ 16 <ais fis>8. |
   <dis b>8. <e b>16 ~ 16 8. <dis b>4 r |
   <cis ais fis>2 <e cis ais>8. <dis ais>16 ~ 16 ais8. |
-  <b gis dis>4 <dis b gis> <gis dis b> <fis dis ais> |
-  <gis e b>8. 16 ~ 16 <fis e b>8. <gis e b>8. <e b>16 ~ 16 <fis b,>8. |
+  <b gis>4 <dis b> <gis dis> <fis dis b> |
+  <e b>2 <e cis ais>8. <dis fis,>16 ~ 16 <e ais,>8. |
   <fis cis ais>4 <ais fis cis>4 <gis dis gis,>2 |
   <b, e,>4 r <cis ais fis>8. <b fis>16 ~ 16 <ais fis>8. |
   r8 fis16 b8 cis8. dis2 |
@@ -194,10 +194,11 @@ pianoUp = \relative c' {
   b4 cis dis4 r |
   <gis e b>4 <fis e>4 <gis e>2 |
   <dis b fis>8. <e b gis>16 ~ 16 8. <dis b fis>4 r |
-  <cis fis, cis>4 <b fis>4 <ais cis,>2 |
-  <gis dis>4 <b gis dis> <dis b gis> <gis dis b> |
+  <cis fis, cis>4 <ais fis>4 <cis ais fis>2 |
+  <b gis dis>4 <dis b gis> <gis dis b> <ais fis dis ais> |
+  %<gis dis>4 <b gis dis> <dis b gis> <gis dis b> |
   <gis e b e,>8 16 16 ~ 16 <fis e b e,>8. <gis e b e,>2 |
-  <fis cis ais fis>2 <dis gis, dis>4 <cis fis, cis> |
+  <fis cis ais fis>2 <dis gis, dis>4 <cis fis,> |
   <b e,>4 r <cis ais fis>8. <b fis>16 ~ 16 <cis ais fis>8. |
   <b gis dis>4 <dis b gis> <gis dis b>2
 }
@@ -228,24 +229,24 @@ pianoDown = \relative c {
   fis1 |
   e'2 b |
   fis gis4 fis |
-  e2 fis8. 16 ~ 16 ais8. |
+  e2 fis2 |
   b1 |
   e2 fis |
   b,2. r4 |
-  fis1 |
-  gis2. fis4 |
-  e2 e |
-  fis2 gis4 fis |
-  e2 fis8. 16 ~ 16 8. |
+  cis2 ais |
+  gis2. b4 |
+  e2 fis |
+  dis4 cis4 b2 |
+  e2 r |
   b1 |
-  e |
-  b |
-  fis |
+  e1 |
+  b1 |
+  fis1 |
   gis4 ais b2 |
   e,2 e |
   fis gis4 fis |
   e2 fis |
-  gis4 ais b fis |
+  gis2 b4 fis |
   e2 fis8. 16 ~ 16 8. |
   b1 |
   b1 |
@@ -277,7 +278,7 @@ The atmosphere gets cold and calm,
 noise absorbed by snow.
 The white landscape glint in the dark
 reflect a candles glow.
-And even in the darkest night, a star is shining bright,
+Even in the darkest night, a star is shining bright,
 for thee, that's Christmas to me.
 
 I've got this Christmas song in my heart,
@@ -285,23 +286,23 @@ enlight a candle glowing in the dark,
 savour the moment of the frozen scenery,
 see the light, that's Christmas to me.
 
-The air is filled with odours of fire and pastry.
+The air is filled with odours of fire and pastries.
 We're sharing what is given us and singing melodies.
 But the greatest present we can give is our presence when we meet.
-It's the time, that's Christmas to me.
+It's that time, that's Christmas to me.
 
 I've got this Christmas song in my heart,
 I see a candle glowing in the dark.
-I hear the voices singing, feel the harmony
+I hear the voices singing, feel the harmony,
 hear the sound, that's Christmas to me.
 
 du du du du
 Oh all the joy that fills our heart and makes us sing
-that's the love that Christmas can bring
+that's the love that Christmas can bring,
 by the Lord, that's Christmas to me.
 
 Through all the changes in our lives, traditions that may go,
-new generations taking part, oh dad, I miss you so
+new generations growing up, and dad, I miss you so
 The only thing I ever seek is the joy of family.
 Oh why, cause that's Christmas to me.
 Oh why, cause that's Christmas to me.
@@ -309,7 +310,7 @@ Oh why, cause that's Christmas to me.
 I've got this Christmas song in my heart,
 I see a star iluminates the dark.
 I'm driving home with all these hopes and memories
-Oh why, cause thats Christmas to me.
+when I'm free, cause that's Christmas to me.
 My dear, Merry Christmas this year.
 }
 
