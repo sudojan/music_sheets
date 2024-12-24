@@ -22,7 +22,7 @@ chordOne = \chordmode {
 
 musicOne = \relative c {
   \clef "G_8"
-  \partial16 b16^\markup{\bold \huge A} |
+  \partial16 b16 ^\markup{\bold \huge A} ^\p |
   gis'8 16 16 ~ 16 fis8 dis16 ~ 16 fis8 dis16 ~ 4 |
   cis8 b16 cis ~ 16 dis8. b4 r8 r16 b |
   gis'8 16 16 ~ 16 fis8 dis16 ~ 16 fis8 dis16 ~ 8. b16 |
@@ -30,7 +30,7 @@ musicOne = \relative c {
   gis'8 16 16 ~ 16 fis8 dis16 ~ 16 fis8 dis16 ~ 8. b16 |
   cis8 b16 cis ~ 16 fis8. dis4 dis8( cis16 b) |
   b16( gis8.) r8 dis'8 cis8. b16 ~ 16 ais8. |
-  b2 r8 b dis fis |
+  b2 r8 b ^\mf dis fis |
   gis4 4 8( ais16) b ~ 16 b,8. |
   dis2 r8 dis fis b, |
   cis4 4 8 16 dis ~ 16 fis8 b,16( ~ |
@@ -39,14 +39,14 @@ musicOne = \relative c {
   fis4( ais8 gis ~ 4) dis8 cis16( b) |
   b4 r8 dis8 cis8. b16 ~ 16 ais8. |
   b2 r2 |
-  r2 r4 r8 r16 b16^\markup{\bold \huge B} |
+  r2 r4 r8 r16 b16^\markup{\bold \huge B} ^\mp |
   gis'8 16 16 ~ 16 fis8 dis16 ~ 16 fis8 dis16 ~ 4 |
   cis8 b16 cis ~ 16 dis8. b4 r8 r16 b |
   gis'8 16 16 ~ 16 fis8 dis16 ~ 16 fis8 dis16 ~ 8. b16 |
-  cis8 b16 cis16 ~ 16 dis8. cis4 r8 b16 b |
+  cis8 b16 cis16 ~ 16 dis8. cis4 r8 b16 ^\mf b |
   gis'8 gis16 16 ~ 16 fis8 dis16 ~ 16 fis8 dis16 ~ 8 b16 b |
-  cis8 b16 cis ~ 16 fis8. dis4 dis8 cis16( b) |
-  b16( gis8.) r8 dis'8 cis8. b16 ~ 16 ais8. |
+  cis8 b16 cis ~ 16 fis8. dis4 dis8 ^\dim cis16( b) |
+  b16( gis8.) \! r8 dis'8 ^\mp cis8. b16 ~ 16 ais8. |
   b2 r8 b dis fis |
   gis4 4 8( ais16) b ~ 16 b,8. |
   dis2 r8 dis fis b, |
@@ -59,21 +59,21 @@ musicOne = \relative c {
   gis4.( fis8 gis4 b |
   dis,2) r8 dis fis b, |
   cis4.( b8 cis4 fis) |
-  b,2 r8 b dis fis |
-  gis8 16 16 ~ 16 8. 8 16 ais ~ 16 gis( fis8) |
+  b,2 r8 b \cresc dis fis \! |
+  gis8 ^\mf 16 16 ~ 16 8. 8 16 ais ~ 16 gis( fis8) |
   fis4( ais8 gis ~ 4) dis8 cis16( b) |
   b4 r8 dis8 cis8. b16 ~ 16 cis8. |
   dis4( gis b) dis,8 cis16( b) |
   b16( gis8.) r8 dis'8 cis8. b16 ~ 16 ais8. |
   b2 r2 |
-  r2 r4 r8 r16 b16^\markup{\bold \huge C} |
+  r2 r4 r8 r16 b16 ^\markup{\bold \huge C} ^\p |
   gis'8 16 16 ~ 16 fis8 dis16 ~ 16 fis8 dis4 b16|
   cis8 b16 cis ~ 16 dis8. b4 r8 r16 b |
   gis'8 16 16 ~ 16 fis8 dis16 ~ 16 fis8 dis16 ~ 8. b16 |
-  cis8 b16 cis16 ~ 16 fis8. ais8( b16 ais gis8) ais |
-  b8 16 16 ~ 16 ais8 b16 ~ 16 fis8 b16 ~ 8 16 16 |
+  cis8 b16 ^\cresc cis16 ~ 16 fis8. ais8( b16 ais gis8) \! ais |
+  b8 ^\f 16 16 ~ 16 ais8 b16 ~ 16 fis8 b16 ~ 8 16 16 |
   ais8 gis16 ais ~ 16 cis8. b4 b8( ais8) |
-  gis4 r8 b8 ais8. gis16 ~ 16 fis8. |
+  gis4 r16 gis b8 ais8. gis16 ~ 16 fis8. |
   dis4( gis b) dis8( cis16 b) |
   b16( gis8.) r16 gis dis'8 cis8. b16 ~ 16 ais8. |
   b2 r8 b, dis fis |
@@ -81,10 +81,10 @@ musicOne = \relative c {
   dis2 r8 dis fis b |
   b4 ais4 fis8 16 ais ~ 8 b8 |
   b16( gis16 ~ 4.) r8 b, dis fis |
-  gis8 16 16 ~ 16 8. 8 gis16 ais ~ 16 gis fis8 |
-  fis4( ais8 gis ~ 4) dis8 (cis16 b) |
-  b16( gis8.) r8 dis'8 cis8. b16 ~ 16 cis8. |
-  dis4( gis b) dis,8( cis16 b) |
+  gis8 ^\mf 16 16 ~ 16 8. 8 gis16 ais ~ 16 gis fis8 |
+  fis4( ais8 gis ~ 4) dis8 ^\dim (cis16 b) |
+  b16( gis8.) \! r16 gis ^\mp dis'8 cis8. b16 ~ 16 cis8. |
+  dis4( gis b) dis,8( ^\p cis16 b) |
   b4 r16 gis dis'8 cis8. b16 ~ 16 ais8. |
   b2 r2 |
 }
@@ -118,15 +118,15 @@ Oh all the joy that fills __ _ our heart and makes __ _  us __ _ sing, __ _ _ _
 that's the __ _ love that Christ -- mas __ _ can bring, __ _ _
 by the __ _ Lord, __ _ that's Christ -- mas __ _ to me.
 Through all the cha -- _ nges in __ _ our lives, tra -- di -- tions that __ _ may go,
-new ge -- ne -- ra -- _ tions ta -- _ king part, __ _ and dad, I miss __ _ you so. __ _ _ _
+new ge -- ne -- ra -- _ tions grow -- _ ing up, __ _ and dad, I miss __ _ you so. __ _ _ _
 The on -- ly thing __ _ I e -- _ ver seek __ _ is the joy of fa -- _ mi -- ly.
-Oh __ _ why, that's Christ -- mas __ _ to me. __ _ _
+Oh __ _ why, cause that's Christ -- mas __ _ to me. __ _ _
 Oh __ _ _ why, __ _ cause that's Christ -- mas __ _ to me.
 % Refrain
 I've got this Christ -- mas song __ _ in __ _ my heart
 I see a star i -- lu -- mi -- nates __ _ the dark __ _ _
 I'm dri -- ving home with all __ _ these hopes and me -- _ mo -- _ ries __ _ _ _
-When  I'm __ _ free. __ _ that's Christ -- mas __ _ to me. __ _ _
+When  I'm __ _ free. __ _ cause that's Christ -- mas __ _ to me. __ _ _
 My __ _ _ dear, Mer -- ry Christ -- mas __ _ this year.
 }
 pianoUp = \relative c' {
@@ -326,7 +326,7 @@ My dear, Merry Christmas this year.
     >>
   >>
   \layout {
-    #(layout-set-staff-size 19)
+    #(layout-set-staff-size 18)
   }
   \midi{}
 }
