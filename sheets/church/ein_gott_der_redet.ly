@@ -95,7 +95,7 @@ verseTwo = \lyricmode { \set stanza = #"2. "
   weil du uns in Fül -- le gibst,
   wenn du __ _ sprichst, wenn du sprichst.
 }
-verseThree = \lyricmode { \set stanza = #"2. "
+verseThree = \lyricmode { \set stanza = #"3. "
   Ge -- stal -- te un -- ser We -- sen
   in das We -- sen dei -- nes Sohns, _
   bis wir einst vor dir ste -- hen

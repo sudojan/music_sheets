@@ -140,6 +140,10 @@ Es ist wahr. Herr, ich glaube!
 Ich lebe für dich.
 }
 
+origin = \lyricmode{
+  History Maker: Martin Smith "1997"
+  deutsche Übersetzung: Daniel Jacobi
+}
 
 \score {
   <<
