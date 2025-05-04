@@ -2,6 +2,7 @@
 
 \header{
   title = "Komm heute zum Vater"
+  %title = "Oh Come to the Alter"
   composer = "Steven Furtick, Mack Brock, Albert Frey"
   tagline = " "
 }
@@ -109,6 +110,45 @@ Sei -- ne Freu -- _ de lässt Sor -- _ gen ver -- gehn. __ _
 Aus der A -- _ sche wird Neu -- _ es ent -- stehn. __ _
 Komm, Je -- sus ruft dich! __ _
 }
+
+choruslyricen = \lyricmode {
+O come to the al -- tar
+The Fa -- ther's arms are o -- pen wide
+For -- give -- ness was bought with
+The pre -- cious blood of Je -- sus Christ
+}
+bridgelyricen = \lyricmode {
+Oh, what a Sav -- ior
+Is -- n't He won -- der -- ful?
+Sing Hal -- le -- lu -- jah, Christ is ri -- sen. __ _
+Bow down be -- fore Him
+For He is Lord of all
+Sing Hal -- le -- lu -- jah, Christ is ri -- sen. __ _
+}
+outrolyricen = \lyricmode {
+Bear your cross __ _ as you wait __ _ for the crown __ _
+Tell the world __ _ of the trea -- _ sure you found __ _
+Je -- sus is call -- ing. __ _
+}
+verseOneen = \lyricmode { \set stanza = #"1. "
+Are you hur -- _ ting and bro -- _ ken with -- in? __ _
+O -- ver -- whelmed __ _ by the weight __ _ of your sin? __ _
+Je -- sus is call -- ing. __ _
+Have you come __ _ to the end __ _ of your -- self? __ _
+Do you thirst __ _ for a drink __ _ from the well? __ _
+Je -- sus is call -- ing. __ _
+\choruslyricen
+\bridgelyricen
+\outrolyricen
+}
+verseTwoen = \lyricmode { \set stanza = #"2. "
+Leave be -- hind __ _ your re -- grets __ _ and mis -- takes __ _
+Come to -- day, __ _ there's no rea -- _ son to wait. __ _
+Je -- sus is call -- ing. __ _
+Bring your sor -- _ rows and trade __ _ them for joy __ _
+From the ash -- _ es, a new __ _ life is born. __ _
+Je -- sus is call -- ing. __ _
+}
 pianoUp = \relative c' {
 }
 
@@ -158,10 +198,10 @@ O Come to the Altar
 VersOne
 Are you hurting and broken within?
 Overwhelmed by the weight of your sin?
-Jesus is calling
+Jesus is calling.
 Have you come to the end of yourself?
 Do you thirst for a drink from the well?
-Jesus is calling
+Jesus is calling.
 
 Chorus
 O come to the altar
@@ -172,10 +212,10 @@ The precious blood of Jesus Christ
 VerseTwo
 Leave behind your regrets and mistakes
 Come today, there's no reason to wait
-Jesus is calling
+Jesus is calling.
 Bring your sorrows and trade them for joy
 From the ashes, a new life is born
-Jesus is calling
+Jesus is calling.
 
 Bridge
 Oh, what a Savior
@@ -188,6 +228,7 @@ Sing Hallelujah, Christ is risen
 Outro
 Bear your cross as you wait for the crown
 Tell the world of the treasure you found
+Jesus is calling
 }
 
 
@@ -198,6 +239,8 @@ Tell the world of the treasure you found
     \new Voice = "one" { \global \musicOne }
     \new Lyrics \lyricsto one \verseOne
     \new Lyrics \lyricsto one \verseTwo
+    %\new Lyrics \lyricsto one \verseOneen
+    %\new Lyrics \lyricsto one \verseTwoen
     %\new PianoStaff <<
     %  \new Staff = "up" { \global \pianoUp }
     %  \new Staff = "down" { \global \pianoDown }
