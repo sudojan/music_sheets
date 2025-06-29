@@ -509,32 +509,80 @@ bassnotesb = \relative c {
 basswords = \lyricmode {
 }
 
-\score {
+
+sopranscore = \new Staff <<
+  \set Staff.vocalName = "Soprano"
+  \new Voice = "soprano" {\global \sopranonotes}
+  \new Lyrics \lyricsto soprano \sopranowords
+>>
+
+altoscore = \new Staff \with { printPartCombineTexts = ##f } <<
+  \set Staff.vocalName = "Alto"
+  \new Voice = "alto" {\global \partCombine \altonotesa \altonotesb}
+  \new NullVoice = "altovoice" {\global \altonotesa}
+  \new Lyrics \lyricsto altovoice \altowords
+>>
+
+tenorscore = \new Staff <<
+  \set Staff.vocalName = "Tenor"
+  \new Voice = "tenor" {\global \tenornotes}
+  \new Lyrics \lyricsto tenor \tenorwords
+>>
+
+bassscore = \new Staff \with { printPartCombineTexts = ##f } <<
+  \set Staff.vocalName = "Bass"
+  \new Voice = "bass" {\global \partCombine \bassnotesa \bassnotesb}
+  \new NullVoice = "bassvoice" {\global \bassnotesa}
+  \new Lyrics \lyricsto bassvoice \basswords
+>>
+
+allscores = \score {
   \new ChoirStaff <<
-    \new Staff <<
-      \set Staff.vocalName = "Soprano"
-      \new Voice = "soprano" {\global \sopranonotes}
-      \new Lyrics \lyricsto soprano \sopranowords
-    >>
-    \new Staff \with { printPartCombineTexts = ##f } <<
-      \set Staff.vocalName = "Alto"
-      \new Voice = "alto" {\global \partCombine \altonotesa \altonotesb}
-      \new NullVoice = "altovoice" {\global \altonotesa}
-      \new Lyrics \lyricsto altovoice \altowords
-    >>
-    \new Staff <<
-      \set Staff.vocalName = "Tenor"
-      \new Voice = "tenor" {\global \tenornotes}
-      \new Lyrics \lyricsto tenor \tenorwords
-    >>
-    \new Staff \with { printPartCombineTexts = ##f } <<
-      \set Staff.vocalName = "Bass"
-      \new Voice = "bassvoi" {\global \partCombine \bassnotesa \bassnotesb}
-      \new NullVoice = "bassvoice" {\global \bassnotesa}
-      \new Lyrics \lyricsto bassvoice \basswords
-    >>
+    \sopranscore
+    \altoscore
+    \tenorscore
+    \bassscore
   >>
-  \layout { %#(layout-set-staff-size 19)
+}
+
+\book {
+  \score {
+    \allscores
+    \layout {}
   }
-  \midi { }
+}
+\book {
+  \bookOutputSuffix "all"
+  \score {
+    \allscores
+    \midi{}
+  }
+}
+\book {
+  \bookOutputSuffix "sopran"
+  \score {
+    \sopranscore
+    \midi {}
+  }
+}
+\book {
+  \bookOutputSuffix "alto"
+  \score {
+    \altoscore
+    \midi {}
+  }
+}
+\book {
+  \bookOutputSuffix "tenor"
+  \score {
+    \tenorscore
+    \midi {}
+  }
+}
+\book {
+  \bookOutputSuffix "bass"
+  \score {
+    \bassscore
+    \midi {}
+  }
 }

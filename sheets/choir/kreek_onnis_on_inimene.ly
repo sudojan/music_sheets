@@ -186,6 +186,7 @@ altonotesunia = \relative c' {
   r4 d8 |
   \time 4/8
   c4 d ~ |
+  \time 3/8
   4. ~ |
   4. |
   c ~ |
@@ -647,34 +648,82 @@ bassnotesb = \relative c {
 basswords = \lyricmode {
 }
 
-\score {
+
+sopranscore = \new Staff \with { printPartCombineTexts = ##f } <<
+  \set Staff.vocalName = "Soprano"
+  \new Voice = "soprano" {\global \partCombine \sopranonotesa \sopranonotesb}
+  \new NullVoice = "sopranovoice" {\global \sopranonotesa}
+  \new Lyrics \lyricsto sopranovoice \sopranowords
+>>
+
+altoscore = \new Staff \with { printPartCombineTexts = ##f } <<
+  \set Staff.vocalName = "Alto"
+  \new Voice = "alto" {\global \partCombine \altonotesa \altonotesb}
+  \new NullVoice = "altovoice" {\global \altonotesa}
+  \new Lyrics \lyricsto altovoice \altowords
+>>
+
+tenorscore = \new Staff \with { printPartCombineTexts = ##f } <<
+  \set Staff.vocalName = "Tenor"
+  \new Voice = "tenor" {\global \partCombine \tenornotesa \tenornotesb}
+  \new NullVoice = "tenorvoice" {\global \tenornotesa}
+  \new Lyrics \lyricsto tenorvoice \tenorwords
+>>
+
+bassscore = \new Staff \with { printPartCombineTexts = ##f } <<
+  \set Staff.vocalName = "Bass"
+  \new Voice = "bassvoi" {\global \partCombine \bassnotesa \bassnotesb}
+  \new NullVoice = "bassvoice" {\global \bassnotesa}
+  \new Lyrics \lyricsto bassvoice \basswords
+>>
+
+allscores = \score {
   \new ChoirStaff <<
-    \new Staff \with { printPartCombineTexts = ##f } <<
-      \set Staff.vocalName = "Soprano"
-      \new Voice = "soprano" {\global \partCombine \sopranonotesa \sopranonotesb}
-      \new NullVoice = "sopranovoice" {\global \sopranonotesa}
-      \new Lyrics \lyricsto sopranovoice \sopranowords
-    >>
-    \new Staff \with { printPartCombineTexts = ##f } <<
-      \set Staff.vocalName = "Alto"
-      \new Voice = "alto" {\global \partCombine \altonotesa \altonotesb}
-      \new NullVoice = "altovoice" {\global \altonotesa}
-      \new Lyrics \lyricsto altovoice \altowords
-    >>
-    \new Staff \with { printPartCombineTexts = ##f } <<
-      \set Staff.vocalName = "Tenor"
-      \new Voice = "tenor" {\global \partCombine \tenornotesa \tenornotesb}
-      \new NullVoice = "tenorvoice" {\global \tenornotesa}
-      \new Lyrics \lyricsto tenorvoice \tenorwords
-    >>
-    \new Staff \with { printPartCombineTexts = ##f } <<
-      \set Staff.vocalName = "Bass"
-      \new Voice = "bassvoi" {\global \partCombine \bassnotesa \bassnotesb}
-      \new NullVoice = "bassvoice" {\global \bassnotesa}
-      \new Lyrics \lyricsto bassvoice \basswords
-    >>
+    \sopranscore
+    \altoscore
+    \tenorscore
+    \bassscore
   >>
-  \layout { %#(layout-set-staff-size 19)
+}
+
+\book {
+  \score {
+    \allscores
+    \layout {}
   }
-  \midi { }
+}
+\book {
+  \bookOutputSuffix "all"
+  \score {
+    \allscores
+    \midi{}
+  }
+}
+\book {
+  \bookOutputSuffix "sopran"
+  \score {
+    \sopranscore
+    \midi {}
+  }
+}
+\book {
+  \bookOutputSuffix "alto"
+  \score {
+    \altoscore
+    \midi {}
+  }
+}
+\book {
+  \bookOutputSuffix "tenor"
+  \score {
+    \tenorscore
+    \midi {}
+  }
+}
+\book {
+  \bookOutputSuffix "bass"
+  \score {
+    \bassscore
+    \midi {}
+  }
 }

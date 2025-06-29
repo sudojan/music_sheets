@@ -368,57 +368,89 @@ bassnotes = \relative c {
 basswords = \lyricmode {
 }
 
-\score {
+
+sopranscore = \new Staff <<
+  \set Staff.vocalName = "Soprano"
+  \new Voice = "soprano" {\global \sopranonotes}
+  \new Lyrics \lyricsto soprano \sopranowords
+>>
+
+altoscore = \new Staff <<
+  \set Staff.vocalName = "Alto"
+  \new Voice = "alto" {\global \altonotes}
+  \new Lyrics \lyricsto alto \altowords
+>>
+
+tenorscore = \new Staff <<
+  \set Staff.vocalName = "Tenor"
+  \new Voice = "tenor" {\global \tenornotes}
+  \new Lyrics \lyricsto tenor \tenorwords
+>>
+
+bassscore = \new Staff <<
+  \set Staff.vocalName = "Bass"
+  \new Voice = "bass" {\global \bassnotes}
+  \new Lyrics \lyricsto bass \basswords
+>>
+
+allscores = \score {
   \new ChoirStaff <<
-    \new Staff <<
-      \set Staff.vocalName = "Soprano"
-      \new Voice = "soprano" {\global \sopranonotes}
-      \new Lyrics \lyricsto soprano \sopranowords
-    >>
-    \new Staff <<
-      \set Staff.vocalName = "Alto"
-      \new Voice = "alto" {\global \altonotes}
-      \new Lyrics \lyricsto alto \altowords
-    >>
-    \new Staff <<
-      \set Staff.vocalName = "Tenor"
-      \new Voice = "tenor" {\global \tenornotes}
-      \new Lyrics \lyricsto tenor \tenorwords
-    >>
-    \new Staff <<
-      \set Staff.vocalName = "Bass"
-      \new Voice = "bass" {\global \bassnotes}
-      \new Lyrics \lyricsto bass \basswords
-    >>
+    \sopranscore
+    \altoscore
+    \tenorscore
+    \bassscore
   >>
-  \layout { %#(layout-set-staff-size 19)
+}
+
+allscoresunfold = \score { \unfoldRepeats{
+  \new ChoirStaff <<
+    \sopranscore
+    \altoscore
+    \tenorscore
+    \bassscore
+  >>
+}
+}
+
+\book {
+  \score {
+    \allscores
+    \layout {}
   }
 }
 
-\score {
-  \unfoldRepeats {
-    \new ChoirStaff <<
-      \new Staff <<
-        \set Staff.vocalName = "Soprano"
-        \new Voice = "soprano" {\global \sopranonotes}
-        \new Lyrics \lyricsto soprano \sopranowords
-      >>
-      \new Staff <<
-        \set Staff.vocalName = "Alto"
-        \new Voice = "alto" {\global \altonotes}
-        \new Lyrics \lyricsto alto \altowords
-      >>
-      \new Staff <<
-        \set Staff.vocalName = "Tenor"
-        \new Voice = "tenor" {\global \tenornotes}
-        \new Lyrics \lyricsto tenor \tenorwords
-      >>
-      \new Staff <<
-        \set Staff.vocalName = "Bass"
-        \new Voice = "bass" {\global \bassnotes}
-        \new Lyrics \lyricsto bass \basswords
-      >>
-    >>
+\book {
+  \bookOutputSuffix "all"
+  \score {
+    \allscoresunfold
+    \midi{}
   }
-  \midi { }
+}
+\book {
+  \bookOutputSuffix "sopran"
+  \score {
+    \unfoldRepeats{\sopranscore}
+    \midi {}
+  }
+}
+\book {
+  \bookOutputSuffix "alto"
+  \score {
+    \unfoldRepeats{\altoscore}
+    \midi {}
+  }
+}
+\book {
+  \bookOutputSuffix "tenor"
+  \score {
+    \unfoldRepeats{\tenorscore}
+    \midi {}
+  }
+}
+\book {
+  \bookOutputSuffix "bass"
+  \score {
+    \unfoldRepeats{\bassscore}
+    \midi {}
+  }
 }

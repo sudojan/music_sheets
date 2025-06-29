@@ -196,10 +196,10 @@ altonotesa = \relative b' {
 }
 altonotesb = \relative b' {
   \altonotesunia
-  g2( fis4 |
-  f2. |
+  g2( fis4 ~ |
+  fis2. ~ |
   \time 4/4
-  f4.) r8 r2 |
+  fis4.) r8 r2 |
   \altonotesunib
 }
 altowords = \lyricmode {
@@ -396,32 +396,81 @@ bassnotes = \relative c {
 basswords = \lyricmode {
 }
 
-\score {
+
+sopranscore = \new Staff <<
+  \set Staff.vocalName = "Soprano"
+  \new Voice = "soprano" {\global \sopranonotes}
+  \new Lyrics \lyricsto soprano \sopranowords
+>>
+
+altoscore = \new Staff \with { printPartCombineTexts = ##f } <<
+  \set Staff.vocalName = "Alto"
+  \new Voice = "alto" {\global \partCombine \altonotesa \altonotesb}
+  \new NullVoice = "altovoice" {\global \altonotesa}
+  \new Lyrics \lyricsto altovoice \altowords
+>>
+
+tenorscore = \new Staff \with { printPartCombineTexts = ##f } <<
+  \set Staff.vocalName = "Tenor"
+  \new Voice = "tenor" {\global \partCombine \tenornotesa \tenornotesb}
+  \new NullVoice = "tenorvoice" {\global \tenornotesa}
+  \new Lyrics \lyricsto tenorvoice \tenorwords
+>>
+
+bassscore = \new Staff <<
+  \set Staff.vocalName = "Bass"
+  \new Voice = "bass" {\global \bassnotes}
+  \new Lyrics \lyricsto bass \basswords
+>>
+
+allscores = \score {
   \new ChoirStaff <<
-    \new Staff <<
-      \set Staff.vocalName = "Soprano"
-      \new Voice = "soprano" {\global \sopranonotes}
-      \new Lyrics \lyricsto soprano \sopranowords
-    >>
-    \new Staff \with { printPartCombineTexts = ##f } <<
-      \set Staff.vocalName = "Alto"
-      \new Voice = "alto" {\global \partCombine \altonotesa \altonotesb}
-      \new NullVoice = "altovoice" {\global \altonotesa}
-      \new Lyrics \lyricsto altovoice \altowords
-    >>
-    \new Staff \with { printPartCombineTexts = ##f } <<
-      \set Staff.vocalName = "Tenor"
-      \new Voice = "tenor" {\global \partCombine \tenornotesa \tenornotesb}
-      \new NullVoice = "tenorvoice" {\global \tenornotesa}
-      \new Lyrics \lyricsto tenorvoice \tenorwords
-    >>
-    \new Staff <<
-      \set Staff.vocalName = "Bass"
-      \new Voice = "bass" {\global \bassnotes}
-      \new Lyrics \lyricsto bass \basswords
-    >>
+    \sopranscore
+    \altoscore
+    \tenorscore
+    \bassscore
   >>
-  \layout { %#(layout-set-staff-size 19)
-  }
-  \midi { }
 }
+
+\book {
+  \score {
+    \allscores
+    \layout {}
+  }
+}
+\book {
+  \bookOutputSuffix "all"
+  \score {
+    \allscores
+    \midi{}
+  }
+}
+\book {
+  \bookOutputSuffix "sopran"
+  \score {
+    \sopranscore
+    \midi {}
+  }
+}
+\book {
+  \bookOutputSuffix "alto"
+  \score {
+    \altoscore
+    \midi {}
+  }
+}
+\book {
+  \bookOutputSuffix "tenor"
+  \score {
+    \tenorscore
+    \midi {}
+  }
+}
+\book {
+  \bookOutputSuffix "bass"
+  \score {
+    \bassscore
+    \midi {}
+  }
+}
+

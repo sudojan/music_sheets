@@ -134,7 +134,7 @@ altonotes = \relative c' {
   c8. 16 ~ 4 ~ |
   2 |
   \repeat unfold 16 {R1 * 2/4 | }
-  \time 3/4
+  \time 3/4 \tempo 4 = 80
   g'8 e d e g4 |
   g8 e d d e e |
   g e d e g g |
@@ -155,6 +155,7 @@ altonotes = \relative c' {
   \time 2/4
   g e d d |
   e2 |
+  \tempo 4 = 120
   \altoburum
   c8 c c d |
   e8. c16 ~ 4 |
@@ -253,7 +254,7 @@ tenornotes = \relative c {
   r16 g8 16 a8 g |
   e8. c16 ~ 4 |
   \tenorburum
-  \time 3/4
+  \time 3/4 \tempo 4 = 80
   R1 * 3/4 |
   R1 * 3/4 |
   R1 * 3/4 |
@@ -274,6 +275,7 @@ tenornotes = \relative c {
   \time 2/4
   a g g g |
   g2 |
+  \tempo 4 = 120
   \tenorburum
   \repeat unfold 17 { R1 * 2/4 | }
   r16 c8 g16 c8 e |
@@ -356,7 +358,7 @@ bassnotes = \relative c {
   r16 g8 g16 a8 g |
   c,8. 16 ~ 4 |
   \bassburum
-  \time 3/4
+  \time 3/4 \tempo 4 = 80
   R1 * 3/4 |
   R1 * 3/4 |
   R1 * 3/4 |
@@ -377,6 +379,7 @@ bassnotes = \relative c {
   \time 2/4
   c c g' g |
   c,2 |
+  \tempo 4 = 120
   \bassburum
   R1 * 2/4 |
   c8. e16 ~ 8 g |
@@ -457,30 +460,77 @@ basswords = \lyricmode {
   \bassburumwords
 }
 
-\score {
+sopranscore = \new Staff <<
+  \set Staff.vocalName = "Soprano"
+  \new Voice = "soprano" {\global \staffHighlight "lightcoral" \sopranonotes}
+  \new Lyrics \lyricsto soprano \sopranowords
+>>
+
+altoscore = \new Staff <<
+  \set Staff.vocalName = "Alto"
+  \new Voice = "alto" {\global \staffHighlight "lightsalmon" \altonotes}
+  \new Lyrics \lyricsto alto \altowords
+>>
+
+tenorscore = \new Staff <<
+  \set Staff.vocalName = "Tenor"
+  \new Voice = "tenor" {\global \staffHighlight "lightgreen" \tenornotes}
+  \new Lyrics \lyricsto tenor \tenorwords
+>>
+
+bassscore = \new Staff <<
+  \set Staff.vocalName = "Bass"
+  \new Voice = "bass" {\global \staffHighlight "lightskyblue" \bassnotes}
+  \new Lyrics \lyricsto bass \basswords
+>>
+
+allscores = \score {
   \new ChoirStaff <<
-    \new Staff <<
-      \set Staff.vocalName = "Soprano"
-      \new Voice = "soprano" {\global \staffHighlight "lightcoral" \sopranonotes}
-      \new Lyrics \lyricsto soprano \sopranowords
-    >>
-    \new Staff <<
-      \set Staff.vocalName = "Alto"
-      \new Voice = "alto" {\global \staffHighlight "lightsalmon" \altonotes}
-      \new Lyrics \lyricsto alto \altowords
-    >>
-    \new Staff <<
-      \set Staff.vocalName = "Tenor"
-      \new Voice = "tenor" {\global \staffHighlight "lightgreen" \tenornotes}
-      \new Lyrics \lyricsto tenor \tenorwords
-    >>
-    \new Staff <<
-      \set Staff.vocalName = "Bass"
-      \new Voice = "bass" {\global \staffHighlight "lightskyblue" \bassnotes}
-      \new Lyrics \lyricsto bass \basswords
-    >>
+    \sopranscore
+    \altoscore
+    \tenorscore
+    \bassscore
   >>
-  \layout { %#(layout-set-staff-size 19)
+}
+
+\book {
+  \score {
+    \allscores
+    \layout {}
   }
-  \midi { }
+}
+\book {
+  \bookOutputSuffix "all"
+  \score {
+    \allscores
+    \midi{}
+  }
+}
+\book {
+  \bookOutputSuffix "sopran"
+  \score {
+    \sopranscore
+    \midi {}
+  }
+}
+\book {
+  \bookOutputSuffix "alto"
+  \score {
+    \altoscore
+    \midi {}
+  }
+}
+\book {
+  \bookOutputSuffix "tenor"
+  \score {
+    \tenorscore
+    \midi {}
+  }
+}
+\book {
+  \bookOutputSuffix "bass"
+  \score {
+    \bassscore
+    \midi {}
+  }
 }

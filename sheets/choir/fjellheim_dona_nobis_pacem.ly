@@ -361,30 +361,79 @@ bassnotes = \relative c {
 basswords = \lyricmode {
 }
 
-\score {
+
+sopranscore = \new Staff <<
+  \set Staff.vocalName = "Soprano"
+  \new Voice = "soprano" {\global \sopranonotes}
+  \new Lyrics \lyricsto soprano \sopranowords
+>>
+
+altoscore = \new Staff <<
+  \set Staff.vocalName = "Alto"
+  \new Voice = "alto" {\global \altonotes}
+  \new Lyrics \lyricsto alto \altowords
+>>
+
+tenorscore = \new Staff <<
+  \set Staff.vocalName = "Tenor"
+  \new Voice = "tenor" {\global \tenornotes}
+  \new Lyrics \lyricsto tenor \tenorwords
+>>
+
+bassscore = \new Staff <<
+  \set Staff.vocalName = "Bass"
+  \new Voice = "bass" {\global \bassnotes}
+  \new Lyrics \lyricsto bass \basswords
+>>
+
+allscores = \score {
   \new ChoirStaff <<
-    \new Staff <<
-      \set Staff.vocalName = "Soprano"
-      \new Voice = "soprano" {\global \sopranonotes}
-      \new Lyrics \lyricsto soprano \sopranowords
-    >>
-    \new Staff <<
-      \set Staff.vocalName = "Alto"
-      \new Voice = "alto" {\global \altonotes}
-      \new Lyrics \lyricsto alto \altowords
-    >>
-    \new Staff <<
-      \set Staff.vocalName = "Tenor"
-      \new Voice = "tenor" {\global \tenornotes}
-      \new Lyrics \lyricsto tenor \tenorwords
-    >>
-    \new Staff <<
-      \set Staff.vocalName = "Bass"
-      \new Voice = "bass" {\global \bassnotes}
-      \new Lyrics \lyricsto bass \basswords
-    >>
+    \sopranscore
+    \altoscore
+    \tenorscore
+    \bassscore
   >>
-  \layout { %#(layout-set-staff-size 19)
-  }
-  \midi { }
 }
+
+\book {
+  \score {
+    \allscores
+    \layout {}
+  }
+}
+\book {
+  \bookOutputSuffix "all"
+  \score {
+    \allscores
+    \midi{}
+  }
+}
+\book {
+  \bookOutputSuffix "sopran"
+  \score {
+    \sopranscore
+    \midi {}
+  }
+}
+\book {
+  \bookOutputSuffix "alto"
+  \score {
+    \altoscore
+    \midi {}
+  }
+}
+\book {
+  \bookOutputSuffix "tenor"
+  \score {
+    \tenorscore
+    \midi {}
+  }
+}
+\book {
+  \bookOutputSuffix "bass"
+  \score {
+    \bassscore
+    \midi {}
+  }
+}
+

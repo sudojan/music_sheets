@@ -15,49 +15,75 @@ global = {
 
 sopranonotesunia = \relative b' {
   R1|
+  \time 6/4
   R1 * 6/4 |
+  \time 4/4
   R1|
+  \time 6/4
   R1 * 6/4 |
+  \time 4/4
   R1|
+  \time 6/4
   R1 * 6/4 |
+  \time 4/4
   R1|
+  \time 6/4
   R1 * 6/4 |
+  \time 4/4
   g8. f16 g8 a bes4 g |
   a4 bes8 a g f g4 |
   d4. f8 e g fis e16( fis) |
   g4 r r2 |
+  \time 6/4
   R1 * 6/4 |
+  \time 4/4
   R1|
   R1|
   R1|
   R1|
+  \time 6/4
   R1 * 6/4 |
+  \time 4/4
   R1|
+  \time 6/4
   R1 * 6/4 |
+  \time 4/4
   d'8. 16 c8 c d4 g, |
   a bes8 a g f g4 |
   d4. f8 e g fis e16( fis) |
   g4 r r2 |
+  \time 6/4
   R1 * 6/4 |
+  \time 4/4
   d'8. 16 c8 c d4 g, |
   a bes8 a g f g4 |
   d4. f8 e g fis e16( fis) |
   g4 r r2 |
+  \time 6/4
   R1 * 6/4 |
+  \time 4/4
   R1 |
+  \time 6/4
   R1 * 6/4 |
+  \time 4/4
   d'8. c16 d8 e f4 d |
   e4 f8 e d c d4 |
   a4. c8 b d cis b16( cis) |
   d4 r r2 |
+  \time 6/4
   R1 * 6/4 |
+  \time 4/4
   d8. c16 d8 e f4 d |
   e4 f8 e d c d4 |
   a4. c8 b d cis b16( cis) |
   d4 r r2 |
+  \time 6/4
   R1 * 6/4 |
+  \time 4/4
   R1 |
+  \time 6/4
   R1 * 6/4 |
+  \time 4/4
   d8. 16 c8 c d4 d |
   e f8 e d c d4 |
   g,4. bes8 a c cis g16( cis) |
@@ -164,46 +190,69 @@ sopranowords = \lyricmode {
 
 altonotes = \relative b' {
   R1 |
+  \time 6/4
   R1 * 6/4 |
+  \time 4/4
   R1 |
+  \time 6/4
   R1 * 6/4 |
+  \time 4/4
   R1 |
+  \time 6/4
   R1 * 6/4 |
+  \time 4/4
   R1 |
+  \time 6/4
   R1 * 6/4 |
+  \time 4/4
   R1 |
   R1 |
   R1 |
   R1 |
+  \time 6/4
   R1 * 6/4 |
+  \time 4/4
   g8. f16 g8 a bes4 g |
   a bes8 a g f g4 |
   d4. f8 e g fis e16( fis) |
   g4 r r2 |
+  \time 6/4
   R1 * 6/4 |
+  \time 4/4
   R1 |
+  \time 6/4
   R1 * 6/4 |
+  \time 4/4
   g8. 16 a8 a g4 g |
   f g8 f d c d4 |
   d4. 8 c c cis cis |
   d4 r r2 |
+  \time 6/4
   R1 * 6/4 |
+  \time 4/4
   g8. 16 a8 a g4 g |
   f g8 f d c d4 |
   d4. 8 c c cis cis |
   d4 r r2 |
+  \time 6/4
   R1 * 6/4 |
+  \time 4/4
   R1 |
+  \time 6/4
   R1 * 6/4 |
+  \time 4/4
   g8. f16 g8 a bes4 g |
   a bes8 a g f g4 |
   d4. f8 e g fis e16( fis) |
   g4 r r2 |
+  \time 6/4
   R1 * 6/4 |
+  \time 4/4
   g8. f16 g8 a bes4 g |
   a bes8 a g f g4 |
   d4. f8 e g fis e16( fis) |
   g4 r r2 |
+  \time 6/4
   R1 * 6/4 |
   \time 4/4
   g4 g8 f g4 g |
@@ -690,33 +739,83 @@ bassnotesb = \relative c {
 basswords = \lyricmode {
 }
 
-\score {
+
+
+
+sopranscore = \new Staff \with { printPartCombineTexts = ##f } <<
+  \set Staff.vocalName = "Soprano"
+  \new Voice = "soprano" {\global \partCombine \sopranonotesa \sopranonotesb}
+  \new NullVoice = "sopranovoice" {\global \sopranonotesa}
+  \new Lyrics \lyricsto sopranovoice \sopranowords
+>>
+
+altoscore = \new Staff <<
+  \set Staff.vocalName = "Alto"
+  \new Voice = "alto" {\global \altonotes}
+  \new Lyrics \lyricsto alto \altowords
+>>
+
+tenorscore = \new Staff \with { printPartCombineTexts = ##f } <<
+  \set Staff.vocalName = "Tenor"
+  \new Voice = "tenor" {\global \partCombine \tenornotesa \tenornotesb}
+  \new NullVoice = "tenorvoice" {\global \tenornotesa}
+  \new Lyrics \lyricsto tenorvoice \tenorwords
+>>
+
+bassscore = \new Staff \with { printPartCombineTexts = ##f } <<
+  \set Staff.vocalName = "Bass"
+  \new Voice = "bassvoi" {\global \partCombine \bassnotesa \bassnotesb}
+  \new NullVoice = "bassvoice" {\global \bassnotesa}
+  \new Lyrics \lyricsto bassvoice \basswords
+>>
+
+allscores = \score {
   \new ChoirStaff <<
-    \new Staff \with { printPartCombineTexts = ##f } <<
-      \set Staff.vocalName = "Soprano"
-      \new Voice = "soprano" {\global \partCombine \sopranonotesa \sopranonotesb}
-      \new NullVoice = "sopranovoice" {\global \sopranonotesa}
-      \new Lyrics \lyricsto sopranovoice \sopranowords
-    >>
-    \new Staff <<
-      \set Staff.vocalName = "Alto"
-      \new Voice = "alto" {\global \altonotes}
-      \new Lyrics \lyricsto alto \altowords
-    >>
-    \new Staff \with { printPartCombineTexts = ##f } <<
-      \set Staff.vocalName = "Tenor"
-      \new Voice = "tenor" {\global \partCombine \tenornotesa \tenornotesb}
-      \new NullVoice = "tenorvoice" {\global \tenornotesa}
-      \new Lyrics \lyricsto tenorvoice \tenorwords
-    >>
-    \new Staff \with { printPartCombineTexts = ##f } <<
-      \set Staff.vocalName = "Bass"
-      \new Voice = "bassvoi" {\global \partCombine \bassnotesa \bassnotesb}
-      \new NullVoice = "bassvoice" {\global \bassnotesa}
-      \new Lyrics \lyricsto bassvoice \basswords
-    >>
+    \sopranscore
+    \altoscore
+    \tenorscore
+    \bassscore
   >>
-  \layout { %#(layout-set-staff-size 19)
+}
+
+\book {
+  \score {
+    \allscores
+    \layout {}
   }
-  \midi { }
+}
+\book {
+  \bookOutputSuffix "all"
+  \score {
+    \allscores
+    \midi{}
+  }
+}
+\book {
+  \bookOutputSuffix "sopran"
+  \score {
+    \sopranscore
+    \midi {}
+  }
+}
+\book {
+  \bookOutputSuffix "alto"
+  \score {
+    \altoscore
+    \midi {}
+  }
+}
+\book {
+  \bookOutputSuffix "tenor"
+  \score {
+    \tenorscore
+    \midi {}
+  }
+}
+\book {
+  \bookOutputSuffix "bass"
+  \score {
+    \bassscore
+    \midi {}
+  }
 }
