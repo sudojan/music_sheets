@@ -2,7 +2,7 @@
 
 \header{
   title = "Über alle Welt"
-  composer = "Brenton Brown, Daniel Jacobi"
+  composer = "Brenton Brown, Daniel Jacobi (1998)"
   tagline = " "
 }
 
@@ -18,6 +18,14 @@ global = {
 
 chordOne = \chordmode {
   \set noChordSymbol = " "
+  a2 e d e
+  a e d e
+  fis:m e d e
+  b1:m d2 e
+  a2 e d e
+  a e d e
+  fis:m e d e
+  b1:m d2 e
 }
 
 musicOne = \relative c' {
@@ -28,24 +36,24 @@ musicOne = \relative c' {
   r4 cis8 e gis8. a16 ~ 8 fis |
   r4 a8 a gis8. a16 ~ 8 8 ~ |
   2 r8 e e e |
-  fis4 a b8( a) a a |
+  fis4 a b8( a) gis a | \break
   r4 ^\markup{\bold \huge Chorus} a4 gis8. a16 ~ 8 fis |
   r4 a4 gis8. a16 ~ 8 8 |
   r4 a8 a gis8. a16 ~ 8 fis |
-  r4 a8 a gis4 a8 a |
-  r4 a gis a8 fis |
-  r4 a8 a gis4 a |
+  r4 a8 a gis8. a16 ~ 8 a |
+  r4 a gis8. a16 ~ 8 fis |
+  r4 a8 a gis8. a16 ~ 8 8 ~ |
   a2 r8 e8 e e |
-  fis4 a b8( a) a a |
+  fis4 a b8( a) gis a |
 }
 
 choruslyric = \lyricmode {
 Re -- gier in __ _ mir
 in dei -- ner __ _ Kraft
 ü -- ber je -- den __ _ Traum
-auch in tiefs -- ter Nacht
-Du bist mein Gott
-ich ge -- hö -- re dir.
+auch in tiefs -- ter __ _ Nacht
+Du bist mein __ _ Gott
+ich ge -- hö -- re __ _ dir. __ _
 Da -- rum re -- gie -- re du __ _ in mir.
 }
 verseOne = \lyricmode { \set stanza = #"1. "
@@ -75,26 +83,37 @@ pianoDown = \relative { \clef bass
 
 
 chorusText = \lyricmode {
-
+Regier in mir
+in deiner Kraft
+über jeden Traum
+auch in tiefster Nacht
+Du bist mein Gott
+ich gehöre dir.
+Darum regiere du in mir.
 }
 verseOneText = \lyricmode {
+Über alle Welt
+bist du der Herr,
+über jeden Berg
+die Sonne und das Meer.
+Doch mein größter Wunsch,
+das, was ich begehr
+ist Herr regiere du in mir.
 }
 verseTwoText = \lyricmode {
+Alles was ich denk
+und jedes Wort
+soll ein Spiegel sein
+von deiner Schönheit Gott.
+Du bedeutest mir
+mehr als alles hier,
+darum regiere du in mir.
 }
 bridgeText = \lyricmode {
 }
 
 originalText = \lyricmode {
-Blessed be your name
-
-VersOne
-
-PreChorus
-Chorus
-
-VerseTwo
-
-Bridge
+Over all the Earth
 }
 
 

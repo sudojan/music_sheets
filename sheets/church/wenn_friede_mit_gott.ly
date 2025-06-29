@@ -2,7 +2,7 @@
 
 \header{
   title = "Wenn Friede Mit Gott"
-  composer = "Horatio Gates Spafford"
+  composer = "Horatio Gates Spafford (1873), Philip Paul Bliss (1876), Theodor Kübler (1880)"
   tagline = " "
 }
 
@@ -119,6 +119,11 @@ Nun leb ich in Christo für Christum allein,
 sein Wort ist mein leitender Stern.
 In ihm hab ich Fried und Erlösung von Pein,
 meine Seele ist selig im Herrn.
+}
+
+
+originalText = \lyricmode {
+When peace like a river
 }
 
 

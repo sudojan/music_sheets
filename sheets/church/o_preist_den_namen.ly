@@ -113,6 +113,12 @@ Wie Er werd ich nun auferstehn
 Um Jesus selbst einmal zu sehn
 }
 
+originalText = \lyricmode {
+O Praise The Name
+Text/Melodie: Dean Ussher, Benjamin William Hastings & Marty Sampson
+Übersetzung: Martin Bruch & Dennis Strehl
+}
+
 
 \score {
   <<

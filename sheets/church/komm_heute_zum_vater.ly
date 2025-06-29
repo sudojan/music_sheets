@@ -56,7 +56,8 @@ musicOne = \relative c'' {
   f4 r8 f g a |
   c4. f, |
   g8. a bes a ~ |
-  4 r8 f8 g a |
+  4 r2 |
+  r4. f8 g a |
   bes4. a |
   r4.f8 g a |
   bes4. a |

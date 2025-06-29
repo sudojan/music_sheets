@@ -16,23 +16,36 @@ global = {
 }
 \layout {indent = 0.0}
 
-chordOne = \chordmode {
+chordOneOriginal = \chordmode {
   \set noChordSymbol = " "
-  f1 c d:m a:m bes2 f c4 f bes c f1
+  f1 c d:m a:m bes2 f c1 f bes c f1
   f2 d:m bes1 c1 a f2 bes4 f c2 f
   c4 f g:m d:m bes c f2
 }
+chordOne = \chordmode {
+  \set noChordSymbol = " "
+  f1 c d:m a:m bes2 f c1 f1
+  f1 c d:m a:m bes2 f c1 f1
+  d:m bes1 c1 a
+  f2 bes c f
+  f2 bes c f
+}
 
 musicOne = \relative c'' {
-  \repeat volta 2 {
-    a4 4 4 4 |
-    g2 2 |
-    f4 4 4 4 |
-    e2 2 |
-    d4 d c f |
-    g a g2 |
-    f2. r4 |
-  }
+  a4 4 4 4 |
+  g2 2 |
+  f4 4 4 4 |
+  e2 2 |
+  d4 d c f |
+  g a g2 |
+  f2. r4 |
+  a4 4 4 4 |
+  g2 2 |
+  f4 4 4 4 |
+  e2 2 |
+  d4 d c f |
+  g a g2 |
+  f2. r4 | \break
   a2 2 |
   bes2. r4 |
   g2 2 |
@@ -48,6 +61,9 @@ verseOne = \lyricmode { \set stanza = #"1. "
 Gott ist ge -- gen -- wär -- tig.
 Las -- set uns an -- be -- ten
 und in Ehr -- furcht vor ihn tre -- ten.
+Gott ist in der Mit -- te.
+Al -- les in uns schwei -- ge
+und sich in -- nigst vor ihm beu -- ge.
 Wer ihn kennt,
 wer ihn nennt,
 schlag die Au -- gen nie -- der;
@@ -62,6 +78,9 @@ verseTwo = \lyricmode { \set stanza = #"2. "
 Gott ist ge -- gen -- wär -- tig,
 dem die Che -- ru -- bi -- nen
 Tag und Nacht ge -- bü -- cket die -- nen.
+Hei -- lig, hei -- lig, hei -- lig!
+sin -- gen ihm zur Eh -- re
+al -- ler En -- gel ho -- he Chö -- re.
 Herr, ver -- nimm uns -- re Stimm,
 da auch wir Ge -- rin -- gen
 uns -- re Op -- fer brin -- gen.
@@ -75,18 +94,25 @@ verseThree = \lyricmode { \set stanza = #"3. "
 Wir ent -- sa -- gen wil -- lig
 al -- len Ei -- tel -- kei -- ten,
 al -- ler Er -- den -- lust und Freu -- den;
+da liegt un -- ser Wil -- le,
+See -- le, Leib und Le -- ben
+dir zum Ei -- gen -- tum er -- ge -- ben.
 Du al -- lein sollst es sein,
 un -- ser Gott und Her -- re,
 dir ge -- bührt die Eh -- re.
 }
 verseThreeB = \lyricmode {
-da liegt unser Wil -- le, See -- le, Leib und Le -- ben
+da liegt un -- ser Wil -- le,
+See -- le, Leib und Le -- ben
 dir zum Ei -- gen -- tum er -- ge -- ben.
 }
 verseFour = \lyricmode { \set stanza = #"4. "
 Ma -- jes -- tä -- tisch We -- sen,
 möcht ich recht dich prei -- sen
 und im Geist dir Dienst er -- wei -- sen.
+Möcht ich wie die En -- gel
+im -- mer vor dir ste -- hen
+und dich ge -- gen -- wär -- tig se -- hen.
 Lass mich dir für und für
 trach -- ten zu ge -- fal -- len,
 lieb -- ster Gott, in al -- lem.
@@ -96,10 +122,42 @@ Möcht ich wie die En -- gel
 im -- mer vor dir ste -- hen
 und dich ge -- gen -- wär -- tig se -- hen.
 }
+verseFive = \lyricmode { \set stanza = #"5. "
+Du durch -- drin -- gest al -- les;
+lass dein schöns -- tes Lich -- te,
+Herr, be -- rüh -- ren mein Ge -- sich -- te.
+Wie die zar -- ten Blu -- men
+wil -- lig sich ent -- fal -- ten
+und der Son -- ne stil -- le hal -- ten,
+lass mich so still und froh
+dei -- ne Strah -- len fas -- sen
+und dich wir -- ken las -- sen.
+}
+verseFiveB = \lyricmode {
+Wie die zar -- ten Blu -- men
+wil -- lig sich ent -- fal -- ten
+und der Son -- ne stil -- le hal -- ten,
+}
+verseSix = \lyricmode { \set stanza = #"6. "
+Mac -- he mich ein -- fäl -- tig,
+in -- nig, ab -- ge -- schie -- den,
+sanft und still in dei -- nem Frie -- den;
+mach mich rei -- nes Her -- zens,
+dass ich dei -- ne Klar -- heit
+schau -- en mag in Geist und Wahr -- heit;
+lass mein Herz ü -- ber -- wärts
+wie ein‘ Ad -- ler schwe -- ben
+und in dir nur le -- ben.
+}
+verseSixB = \lyricmode {
+}
 verseSeven = \lyricmode { \set stanza = #"7. "
 Herr, komm in mir woh -- nen,
 lass mein‘ Geist auf Er -- den
 dir ein Hei -- lig -- tum noch wer -- den;
+komm, du na -- hes We -- sen,
+dich in mir ver -- klä -- re,
+dass ich dich stets lieb und eh -- re.
 Wo ich geh, sitz und steh,
 lass mich dich er -- blic -- ken
 und vor dir mich büc -- ken.
@@ -186,7 +244,8 @@ Luft, die alles füllet, drin wir immer schweben,
 aller Dinge Grund und Leben,
 Meer ohn Grund und Ende, Wunder aller Wunder:
 ich senk mich in dich hinunter.
-Ich in dir, du in mir, lass mich ganz verschwinden,
+Ich in dir, du in mir,
+lass mich ganz verschwinden,
 dich nur sehn und finden.
 }
 
@@ -197,15 +256,19 @@ dich nur sehn und finden.
     \new ChordNames {\set chordChanges = ##t \chordOne}
     \new Voice = "one" { \global \musicOne }
     \new Lyrics \lyricsto one \verseOne
-    \new Lyrics \lyricsto one \verseOneB
+    %\new Lyrics \lyricsto one \verseOneB
     \new Lyrics \lyricsto one \verseTwo
-    \new Lyrics \lyricsto one \verseTwoB
-    %\new Lyrics \lyricsto one \verseThree
+    %\new Lyrics \lyricsto one \verseTwoB
+    \new Lyrics \lyricsto one \verseThree
     %\new Lyrics \lyricsto one \verseThreeB
     \new Lyrics \lyricsto one \verseFour
-    \new Lyrics \lyricsto one \verseFourB
+    %\new Lyrics \lyricsto one \verseFourB
+    \new Lyrics \lyricsto one \verseFive
+    %\new Lyrics \lyricsto one \verseFiveB
+    \new Lyrics \lyricsto one \verseSix
+    %\new Lyrics \lyricsto one \verseSixB
     \new Lyrics \lyricsto one \verseSeven
-    \new Lyrics \lyricsto one \verseSevenB
+    %\new Lyrics \lyricsto one \verseSevenB
     %\new PianoStaff <<
     %  \new Staff = "up" { \global \pianoUp }
     %  \new Staff = "down" { \global \pianoDown }

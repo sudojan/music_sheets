@@ -160,16 +160,8 @@ Ich glaube an deinen Namen, Jesus.
 }
 
 originalText = \lyricmode {
-This I believe
-
-VersOne
-
-PreChorus
-Chorus
-
-VerseTwo
-
-Bridge
+This I belive
+Text/Melodie: Ben Fielding, Matt Crocker (Hillsong Worship)
 }
 
 
