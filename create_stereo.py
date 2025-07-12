@@ -5,6 +5,8 @@ import argparse
 import array
 import wave
 from pathlib import Path
+import subprocess
+import numpy as np
 
 def get_channel(ifile):
     # print(ifile.getparams())
@@ -18,13 +20,21 @@ def get_channel(ifile):
 def make_stereo(main_wav, spec_wav, output):
     file_all = wave.open(main_wav)
     left_channel = get_channel(file_all)
-    file_bass = wave.open(spec_wav)
-    right_channel = get_channel(file_bass)
+    file_spec = wave.open(spec_wav)
+    right_channel = get_channel(file_spec)
     (nchannels, sampwidth, framerate, nframes, comptype, compname) = file_all.getparams()
 
+    print('shapes:', np.shape(left_channel), np.shape(right_channel))
     stereo = 2 * left_channel
     stereo[0::2] = left_channel
-    stereo[1::2] = right_channel
+    # stereo[1::2] = right_channel
+    # BUG, that needs to be fixed!
+    # The problem is, that if the specific voice has a rest at the end
+    # while other voices are still singing, timidity drops the ending
+    # of that specific voice. This fix just puts all other voices
+    # at the end in place. That's not correct, but at least it's compiling.
+    # At the moment I don't know how to add a rest at the end :(
+    stereo[1:2*len(right_channel):2] = right_channel
 
     ofile = wave.open(output, 'w')
     ofile.setparams((2, sampwidth, framerate, nframes, comptype, compname))
@@ -55,6 +65,10 @@ def main(pathname):
         else:
             out_wav = song_dir.joinpath(f'{idx.stem}-stereo.wav')
         make_stereo(str(wav_all_file), str(idx), str(out_wav))
+
+    # for idx in song_dir.glob('*-stereo.wav'):
+    #     print(f'make mp3 for {idx}')
+    #     subprocess.call(f'lame --preset insane {str(idx)}')
 
 
 if __name__ == '__main__':
