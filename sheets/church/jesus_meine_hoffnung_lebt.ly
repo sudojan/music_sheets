@@ -2,7 +2,7 @@
 
 \header{
   title = "Jesus meine Hoffnunf lebt"
-  composer = "Phil Wickham, Brian Johnson"
+  composer = "Phil Wickham, Brian Johnson (2017)"
   tagline = " "
 }
 
@@ -168,6 +168,43 @@ Kein Grab hat nun Anspruch mehr auf mich.
 Jesus, dein Sieg bleibt ewiglich.
 }
 
+originalText = \lyricmode {
+Living hope
+Verse
+How great the chasm that lay between us
+How high the mountain I could not climb
+In desperation I turned to heaven
+And spoke Your name into the night
+Then through the darkness Your loving-kindness
+Tore through the shadows of my soul
+The work is finished the end is written
+Jesus Christ my living hope
+Verse
+Who could imagine so great a mercy
+What heart could fathom such boundless grace
+The God of ages stepped down from glory
+To wear my sin and bear my shame
+The cross has spoken I am forgiven
+The King of kings calls me His own
+Beautiful Savior I’m Yours forever
+Jesus Christ my living hope
+Chorus
+Hallelujah praise the One who set me free
+Hallelujah death has lost its grip on me
+You have broken every chain
+There’s salvation in Your name
+Jesus Christ my living hope
+Verse
+Then came the morning that sealed the promise
+Your buried body began to breathe
+Out of the silence the Roaring Lion
+Declared the grave has no claim on me
+(REPEAT)
+Jesus Yours is the victory whoa
+Ending
+Jesus Christ my living hope
+Oh God You are my living hope
+}
 
 \score {
   <<

@@ -2,7 +2,7 @@
 
 \header{
   title = "In Christus ist mein ganzer Halt"
-  composer = "Keith Getty, Stuart Townend"
+  composer = "Keith Getty, Stuart Townend, Guido Baltes (2001)"
   tagline = " "
 }
 
@@ -39,20 +39,20 @@ chordOne = \chordmode {
 
 musicOne = \relative c' {
   \partial 4. a8 b8. d16 |
-  d4. a8 b d |
-  e2 fis8 e16 d |
-  b8 fis' e4. d8 |
-  d4. a8 b8. d16 |
-  d4. a8 b d |
-  e2 fis8 e16 d |
-  b8 fis' e4. d8 |
-  d4. 8 fis a |
-  b4. 8 a fis |
+  d4 r8 a b d |
+  e4 r fis8 e16 d |
+  b8 fis' e4 ~ 8 d8 |
+  d4 r8 a b8. d16 |
+  d4 r8 a b d |
+  e4 r fis8 e16 d |
+  b8 fis' e4 ~ 8 d8 |
+  d4 r8 d fis a |
+  b4 r8 b a fis |
   e4. d8 d' cis |
-  b4. 8 a fis |
+  b4 r8 b a fis |
   e4. a,8 b8. d16 |
-  d4. a8 b d |
-  e2 fis8 e16 d |
+  d4 r8 a b d |
+  e4 r fis8 e16 d |
   b8 fis' e4. d8 |
   d2. |
 }
@@ -61,9 +61,9 @@ choruslyric = \lyricmode {
 }
 verseOne = \lyricmode { \set stanza = #"1. "
 In Chris -- tus ist mein gan -- zer Halt.
-Er ist mein Licht, mein Heil, mein Lied,
+Er ist mein Licht, mein Heil, __ _ mein Lied,
 der Eck -- stein und der fes -- te Grund,
-sich -- er -- er Halt in Sturm und Wind.
+sich -- er -- er Halt in Sturm __ _ und Wind.
 Wer liebt wie er, stillt mei -- ne Angst,
 bringt Frie -- den mir mit -- ten im Kampf?
 Mein Trost ist er, in al -- lem Leid.
@@ -71,9 +71,9 @@ In sei -- ner Lie -- be find ich Halt.
 }
 verseTwo = \lyricmode { \set stanza = #"2. "
 Das ew -- ge Wort, als Mensch ge -- born.
-Gott of -- fen -- bart in ei -- nem Kind.
+Gott of -- fen -- bart in ei -- _ nem Kind.
 Der Herr der Welt, ver -- lacht, ver -- höhnt
-und von den Sei -- nen ab -- ge -- lehnt.
+und von den Sei -- nen ab -- _ ge -- lehnt.
 Doch dort am Kreuz, wo Je -- sus starb
 und Got -- tes Zorn ein En -- de fand,
 trug er die Schuld der gan -- zen Welt.
@@ -81,9 +81,9 @@ Durch sei -- ne Wun -- den bin ich heil.
 }
 verseThree = \lyricmode { \set stanza = #"3. "
 Sie leg -- ten ihn ins küh -- le Grab.
-Dun -- kel um -- fing das Licht der Welt.
+Dun -- kel um -- fing das Licht __ _ der Welt.
 Doch mor -- gens früh am drit -- ten Tag
-wur -- de die Nacht vom Licht er -- hellt.
+wur -- de die Nacht vom Licht __ _ er -- hellt.
 Der Tod be -- siegt, das Grab ist leer,
 der Fluch der Sün -- de ist nicht mehr,
 denn ich bin sein, und er ist mein.
@@ -91,9 +91,9 @@ Mit sei -- nem Blut macht er mich rein.
 }
 verseFour = \lyricmode { \set stanza = #"4. "
 Nun hat der Tod die Macht ver -- lorn.
-Ich bin durch Chris -- tus neu ge -- born.
+Ich bin durch Chris -- tus neu __ _ ge -- born.
 Mein Le -- ben liegt in sei -- ner Hand
-vom ers -- ten A -- tem -- zu -- ge an.
+vom ers -- ten A -- tem -- zu -- _ ge an.
 Und kei -- ne Macht in die -- ser Welt
 kann mich ihm rau -- ben, der mich hält,
 bis an das En -- de die -- ser Zeit,

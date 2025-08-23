@@ -65,8 +65,7 @@ a2 4 |
 c bes g |
 f e f |
 a a g |
-f2
-
+f2.
 }
 
 choruslyric = \lyricmode {

@@ -2,7 +2,7 @@
 
 \header{
   title = "Das glaube ich"
-  composer = "Ben Fielding, Matt Crocker"
+  composer = "Ben Fielding, Matt Crocker (2014)"
   tagline = " "
 }
 
@@ -11,7 +11,7 @@ global = {
   \time 4/4
   \dynamicUp
   \set melismaBusyProperties = #'()
-  \tempo 4 = 80
+  \tempo 4 = 72
   \set Score.rehearsalMarkFormatter = #format-mark-box-numbers
 }
 \layout {indent = 0.0}
