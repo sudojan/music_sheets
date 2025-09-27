@@ -114,10 +114,10 @@ dann schau ich dank -- bar __ _ dein Op -- fer __ _ an.
 Weil du mich liebst schöpf __ _ ich neu -- en Mut.
 }
 verseFour = \lyricmode { \set stanza = #"4. "
-Wie wun -- der -- schön die -- ser Tag sein wird
-an dem sich je -- der vor dir ver -- neigt.
-Doch jetzt schon eh -- ren wir dich al -- lein,
-denn du re -- gierst bis in E -- wig -- keit.
+Wie wun -- der -- schön die -- _ ser Tag sein __ _ wird
+an dem sich je -- der __ _ vor dir ver -- neigt.
+Doch jetzt schon eh -- ren __ _ wir dich al -- _ lein,
+denn du re -- gierst bis __ _ in E -- wig -- keit.
 }
 pianoUp = \relative c' {
 }
@@ -173,7 +173,7 @@ originalText = \lyricmode {
     \new Lyrics \lyricsto one \verseOne
     \new Lyrics \lyricsto one \verseTwo
     \new Lyrics \lyricsto one \verseThree
-    %\new Lyrics \lyricsto one \verseFour
+    \new Lyrics \lyricsto one \verseFour
     %\new PianoStaff <<
     %  \new Staff = "up" { \global \pianoUp }
     %  \new Staff = "down" { \global \pianoDown }
