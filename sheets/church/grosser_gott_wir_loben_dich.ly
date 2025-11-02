@@ -90,6 +90,9 @@ leit uns auf __ _ der rech -- _ ten Bahn,
 dass der Feind __ _ uns nicht __ _ ver -- der -- be.
 Füh -- re uns durch die -- se Zeit,
 nimm uns auf __ _ in E -- _ wig -- keit.
+% Alternativ
+%Wart und pfleg es in der Zeit,
+%heb es hoch __ _ in E -- _ wig -- keit.
 }
 verseSix = \lyricmode { \set stanza = #"6. "
 Al -- le Ta -- _ ge wol -- _ len wir
@@ -104,6 +107,14 @@ Herr, er -- barm, __ _ er -- bar -- _ me dich.
 Lass uns dei -- _ ne Gü -- _ te schau -- en;
 dei -- ne Treu -- _ e zei -- _ ge sich,
 wie wir fest __ _ auf dich __ _ ver -- trau -- en.
+Auf dich hof -- fen wir al -- lein,
+lass uns nicht __ _ ver -- lo -- _ ren sein.
+}
+verseSevenAlternative = \lyricmode { \set stanza = #"7. "
+Herr, er -- barm, __ _ er -- bar -- _ me dich.
+Auf uns kom -- _ me, Herr, __ _ dein Se -- gen.
+dei -- ne Gü -- _ te zei -- _ ge sich,
+al -- len der __ _ Ver -- hei -- _ ßung we -- gen.
 Auf dich hof -- fen wir al -- lein,
 lass uns nicht __ _ ver -- lo -- _ ren sein.
 }
@@ -164,6 +175,9 @@ leit uns auf der rechten Bahn,
 dass der Feind uns nicht verderbe.
 Führe uns durch diese Zeit,
 nimm uns auf in Ewigkeit.
+Alternativ:
+Wart und pfleg es in der Zeit,
+heb es hoch in Ewigkeit.
 }
 verseSixText = \lyricmode {
 Alle Tage wollen wir
@@ -178,6 +192,13 @@ Herr, erbarm, erbarme dich.
 Lass uns deine Güte schauen;
 deine Treue zeige sich,
 wie wir fest auf dich vertrauen.
+Auf dich hoffen wir allein,
+lass uns nicht verloren sein.
+Alternativ:
+Herr, erbarm, erbarme dich.
+Auf uns komme, Herr, dein Segen.
+Deine Güte zeige sich
+allen der Verheißung wegen.
 Auf dich hoffen wir allein,
 lass uns nicht verloren sein.
 }

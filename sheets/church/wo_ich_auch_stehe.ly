@@ -37,7 +37,7 @@ musicOne = \relative c' {
   a4 g8 g g c, |
   d2. |
   R1 * 6/8 |
-  r4 r8 c d e |
+  r4 c8 c d e |
   f4 e8 e d c |
   2. |
   R1 * 6/8 |
@@ -72,14 +72,14 @@ choruslyric = \lyricmode {
 verseOne = \lyricmode { \set stanza = #"1. "
   Wo ich auch ste -- he, du warst schon da.
   Wenn ich auch flie -- he, du bist mir nah.
-  Was ich auch den -- ke, du weißt es schon.
+  \markup{\tiny \raise #1 \rest {8}} Was ich auch den -- ke, du weißt es schon.
   Was ich auch füh -- le du wirst ver -- stehn.
   \choruslyric
 }
 verseTwo = \lyricmode { \set stanza = #"2. "
   Du kennst mein Herz, die Sehn -- sucht in mir.
   Als wah -- rer Gott und Mensch warst du hier.
-  In_al -- lem uns gleich und doch oh -- ne Schuld.
+  In al -- lem uns gleich und doch oh -- ne Schuld.
   Du bist barm -- her -- zig, vol -- ler Ge -- duld.
 }
 pianoUp = \relative c' {
