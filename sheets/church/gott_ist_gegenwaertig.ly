@@ -26,7 +26,7 @@ chordOne = \chordmode {
   \set noChordSymbol = " "
   f1 c d:m a:m bes2 f c1 f1
   f1 c d:m a:m bes2 f c1 f1
-  d:m bes1 c1 a
+  f2 d2:m bes1 c1 a
   f2 bes c f
   f2 bes c f
 }
@@ -54,6 +54,31 @@ musicOne = \relative c'' {
   g2 a |
   c4 c bes a |
   g2 f |
+}
+
+musicTwo = \relative c' {
+  c4 4 4 4 |
+  2 2 |
+  a4 d4 4 4 |
+  2 cis |
+  d4 bes a a |
+  c c d( c) |
+  a2. r4 |
+  c4 4 4 4 |
+  2 2 |
+  a4 d4 4 4 |
+  2 cis |
+  d4 bes a a |
+  c c d( c) |
+  a2. r4 | \break
+  c2 f4( e) |
+  d2. r4 |
+  c2 e4( d) |
+  cis2. r4 |
+  c4 f8( e) d4 c |
+  c2 2 |
+  c4 f d d |
+  d( c) a2 |
 }
 
 
@@ -252,23 +277,26 @@ dich nur sehn und finden.
 
 
 \score {
-  <<
+  \new ChoirStaff <<
     \new ChordNames {\set chordChanges = ##t \chordOne}
-    \new Voice = "one" { \global \musicOne }
-    \new Lyrics \lyricsto one \verseOne
-    %\new Lyrics \lyricsto one \verseOneB
-    \new Lyrics \lyricsto one \verseTwo
-    %\new Lyrics \lyricsto one \verseTwoB
-    \new Lyrics \lyricsto one \verseThree
-    %\new Lyrics \lyricsto one \verseThreeB
-    \new Lyrics \lyricsto one \verseFour
-    %\new Lyrics \lyricsto one \verseFourB
-    \new Lyrics \lyricsto one \verseFive
-    %\new Lyrics \lyricsto one \verseFiveB
-    \new Lyrics \lyricsto one \verseSix
-    %\new Lyrics \lyricsto one \verseSixB
-    \new Lyrics \lyricsto one \verseSeven
-    %\new Lyrics \lyricsto one \verseSevenB
+    \new Staff <<
+      \new Voice = "one" { \voiceOne \global \musicOne }
+      \new Voice = "two" { \voiceTwo \global \musicTwo }
+      \new Lyrics \lyricsto one \verseOne
+      %\new Lyrics \lyricsto one \verseOneB
+      \new Lyrics \lyricsto one \verseTwo
+      %\new Lyrics \lyricsto one \verseTwoB
+      \new Lyrics \lyricsto one \verseThree
+      %\new Lyrics \lyricsto one \verseThreeB
+      \new Lyrics \lyricsto one \verseFour
+      %\new Lyrics \lyricsto one \verseFourB
+      \new Lyrics \lyricsto one \verseFive
+      %\new Lyrics \lyricsto one \verseFiveB
+      \new Lyrics \lyricsto one \verseSix
+      %\new Lyrics \lyricsto one \verseSixB
+      \new Lyrics \lyricsto one \verseSeven
+      %\new Lyrics \lyricsto one \verseSevenB
+    >>
     %\new PianoStaff <<
     %  \new Staff = "up" { \global \pianoUp }
     %  \new Staff = "down" { \global \pianoDown }

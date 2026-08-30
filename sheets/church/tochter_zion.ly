@@ -22,6 +22,8 @@ chordOne = \chordmode {
   c c g4 c g2 c1
   c g2:7 a:m d4:m a:m g:7 a:m e1
   a:m d e4:m c d2 g1
+  c1 c g2. c4 g1
+  c c g4 c g2 c1
 }
 
 musicOne = \relative c'' {
@@ -32,7 +34,7 @@ d1 |
 e8( f g a g4) g |
 c2 g |
 f4( e8 f d4.) c8 |
-c1 |
+c1 | \break
 e8( d e f e4) e |
 d2 c |
 f4( e d) c |
@@ -40,7 +42,15 @@ b1 |
 c8( b c d c4) c |
 a'2 fis |
 g4( a8 g fis4.) g8 |
-g1 |
+g1 | \break
+g2 e4.( f8) |
+g2 c, |
+d8( e f g f4) e |
+d1 |
+e8( f g a g4) g |
+c2 g |
+f4( e8 f d4.) c8 |
+c1 |
 }
 
 
@@ -49,18 +59,24 @@ Toch -- ter __ _ Zi -- on freu -- _ _ _ _ e dich,
 jauch -- _ _ _ _ ze laut, Je -- ru -- _ _ _ sa -- lem!
 Sieh, __ _ _ _ _ dein Kö -- nig kommt __ _ _ zu dir,
 ja, __ _ _ _ _ er kommt, der Frie -- _ _ _ de -- fürst!
+Toch -- ter __ _ Zi -- on freu -- _ _ _ _ e dich,
+jauch -- _ _ _ _ ze laut, Je -- ru -- _ _ _ sa -- lem!
 }
 verseTwo = \lyricmode { \set stanza = #"2. "
 Ho -- si -- _ an -- na, Da -- _ _ _ _ vids Sohn,
 sei __ _ _ _ _ ge -- seg -- net dei -- _ _ _ nem Volk!
 Grün -- _ _ _ _ de nun dein e -- _ _ wig Reich!
 Ho -- _ _ _ _ si -- an -- na in __ _ _ _ der Höh!
+Ho -- si -- _ an -- na, Da -- _ _ _ _ vids Sohn,
+sei __ _ _ _ _ ge -- seg -- net dei -- _ _ _ nem Volk!
 }
 verseThree = \lyricmode { \set stanza = #"3. "
 Ho -- si -- _ an -- na, Frie -- _ _ _ _ de -- fürst,
 sei __ _ _ _ _ ge -- grü -- ßet, Kö -- _ _ _ nig mild!
 E -- _ _ _ _ wig steht dein Frie -- _ _ dens -- thron,
 du, __ _ _ _ _ des ew -- gen Va -- _ _ _ ters Kind!
+Ho -- si -- _ an -- na, Frie -- _ _ _ _ de -- fürst,
+sei __ _ _ _ _ ge -- grü -- ßet, Kö -- _ _ _ nig mild!
 }
 pianoUp = \relative c' {
 }

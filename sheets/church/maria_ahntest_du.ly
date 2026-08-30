@@ -7,7 +7,7 @@
 }
 
 global = {
-  \key b \minor
+  \key a \minor
   \time 4/4
   \dynamicUp
   \set melismaBusyProperties = #'()
@@ -16,7 +16,7 @@ global = {
 }
 \layout {indent = 0.0}
 
-chordOne = \chordmode {
+chordOneb = \chordmode {
   \set noChordSymbol = " "
   b1:m b:m a e:m fis
   b:m a e:m fis
@@ -26,8 +26,9 @@ chordOne = \chordmode {
   g a b:m b:m
   g a b:m fis
 }
+chordOne = \transpose b a {\chordOneb}
 
-musicOne = \relative c' {
+musicOneb = \relative c' {
   \repeat volta 3 {
     r4 r8 b b cis d e |
     fis2 r8 d fis e ~ |
@@ -39,7 +40,7 @@ musicOne = \relative c' {
     4 cis8 d ~ 8 e4 g8 ~ |
     8 fis ~ 4 r8 fis b b ~ |
     b4 r4 r8 b d cis ~ |
-    8 b a4 r4 r8 e |
+    4 b8 a4. r8 e |
     fis4 a8 a ~ 8 b4 8 ~ |
     2 r4 e,8 fis |
     g4 fis8 e ~ 4 d8 e ~ |
@@ -59,6 +60,7 @@ musicOne = \relative c' {
   b4 cis8 d4 cis cis8 ~ |
   2 r |
 }
+musicOne = \transpose b a {\musicOneb}
 
 choruslyric = \lyricmode {
 Die Blin -- den sehn,
@@ -74,8 +76,8 @@ verseOne = \lyricmode { \set stanza = #"1. "
   dass dein klei -- _ ner Sohn __ _
   einst ü -- ber Was -- _ ser gehn __ _ wird? __ _
   Hast du es ge -- ahnt,
-  dass dein klei -- _ ner Sohn _
-  _ uns -- re Kin -- _ der ret -- _ ten wird,
+  dass dein klei -- _ ner Sohn __ _
+  \markup{\tiny \raise #1 \rest {8}} uns -- re Kin -- _ der ret -- _ ten wird,
   dass dein Kind __ _ dem,
   du Le -- _ ben gabst,
   dir neu -- es Le -- _ ben gibt, _
@@ -89,8 +91,8 @@ Ma -- ri -- a ahn -- test du,
 dass durch dei -- _ nen Sohn __ _
 die Blin -- den se -- _ hen wer -- _ den? __ _
 Hast du es ge -- ahnt,
-dass durch dei -- _ nen Sohn _
-_ Sturm und Wel -- _ len schwei -- _ gen, __ _
+dass durch dei -- _ nen Sohn __ _
+\markup{\tiny \raise #1 \rest {8}} Sturm und Wel -- _ len schwei -- _ gen, __ _
 dass dein Kind, __ _
 mit den Eng -- _ eln wohnt
 dort, wo Gott sel -- _ ber thront? __ _
@@ -103,7 +105,7 @@ Ma -- ri -- a ahn -- test du,
 dass durch dei -- _ nen Sohn __ _
 die gan -- ze Welt __ _ ge -- macht __ _ ist? __ _
 Hast du es ge -- ahnt,
-dass durch dei -- _ nen Sohn _
+dass durch dei -- _ nen Sohn __ _
 die Völ -- ker -- welt __ _ re -- giert __ _ wird? __ _
 Ahn -- test du, __ _
 dass dein klei -- _ ner Sohn

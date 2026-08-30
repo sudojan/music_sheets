@@ -7,7 +7,7 @@
 }
 
 global = {
-  \key g \major
+  \key f \major
   \time 4/4
   \dynamicUp
   \set melismaBusyProperties = #'()
@@ -16,7 +16,7 @@ global = {
 }
 \layout {indent = 0.0}
 
-chordOne = \chordmode {
+chordOneG = \chordmode {
   \set noChordSymbol = " "
   g1
   c2 d
@@ -38,8 +38,9 @@ chordOne = \chordmode {
   c d
   g1
 }
+chordOne = \transpose g f {\chordOneG}
 
-musicOne = \relative c' {
+musicOneG = \relative c' {
 \repeat volta 2 {
 r2 ^\markup{\bold \huge Vers} r8. d16 d8 g |
 fis8.( e16) 4 r8. c16 c8 e8 |
@@ -54,7 +55,7 @@ c8 b16 c ~ 8 d16 e ~ 8 d16 c ~ 8 b
       \volta 2 { b2 r |}
   }
 } \break
-b'4. ^\markup{\bold \huge Chorus} a16 c ~ 4 r4 |
+b'4. ^\markup{\bold \huge Chorus} a16 c ~ 4 r8. a16 |
 a8 b c b16 16 ~ 4 r8. b16 |
 4. a16 c ~ 4 r8. a16 |
 a8 b c b b r8 b a |
@@ -64,11 +65,12 @@ c2 r8. d16 g fis8. |
 g2 r4 g16 16 fis8 |
 g2 r |
 }
+musicOne = \transpose g f {\musicOneG}
 
 
 choruslyric = \lyricmode {
-Gro -- ßer Gott __ _
-hast dich klein ge -- macht. __ _
+Gro -- ßer Gott, __ _
+du hast dich klein ge -- macht. __ _
 Du starbst für mich, __ _
 und riefst: Es ist voll -- bracht!
 Wie ein Lamm nahmst du es __ _ auf dich, __ _
@@ -104,7 +106,7 @@ pianoDown = \relative { \clef bass
 
 
 chorusText = \lyricmode {
-Großer Gott hast dich klein gemacht.
+Großer Gott, du hast dich klein gemacht.
 Du starbst für mich,
 und riefst: Es ist vollbracht!
 Wie ein Lamm nahmst du es auf dich,
