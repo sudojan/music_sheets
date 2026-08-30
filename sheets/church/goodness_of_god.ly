@@ -7,7 +7,7 @@
 }
 
 global = {
-  \key a\major
+  \key a \major
   \time 4/4
   \dynamicUp
   \set melismaBusyProperties = #'()

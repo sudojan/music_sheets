@@ -7,7 +7,7 @@
 }
 
 global = {
-  \key g \major
+  \key a \major
   \time 4/4
   \dynamicUp
   \set melismaBusyProperties = #'()
@@ -27,15 +27,15 @@ chordOne = \chordmode {
   e4.:m d8 ~ 2
   c4. g8 ~ 2
   d1
-  r1
-  c4. g8 ~ 2
-  e4.:m d8 ~ 2
-  c4. g8 ~ 2
-  d1
-  c4. g8 ~ 2
-  e4.:m d8 ~ 2
-  c4. g8 ~ 2
-  d1
+  %r1
+  %c4. g8 ~ 2
+  %e4.:m d8 ~ 2
+  %c4. g8 ~ 2
+  %d1
+  %c4. g8 ~ 2
+  %e4.:m d8 ~ 2
+  %c4. g8 ~ 2
+  %d1
   r1
   c4. g8 ~ 2
   d4. e8:m ~ 2
@@ -55,9 +55,10 @@ chordOne = \chordmode {
   c g/b
   d1
 }
+chordOneA = \transpose g a {\chordOne}
 
 musicOne = \relative c' {
-r2 ^\markup{\bold \huge Vers 1} r8 g8 b d |
+r2 ^\markup{\bold \huge Vers} r8 g8 b d |
 e d d16 b b8 ~ 8 a16 g ~ 8. g16 |
 a8 b d16 b a8 ~ 4 b8 d |
 e d d b ~ 8 g a a ~ |
@@ -66,26 +67,26 @@ e d d16 b b8 ~ 8 a16 g ~ 4 |
 a8 b d16 b b8 ~ 8 a8 b8 d |
 e d d b ~ 8 g a a ~ |
 2 r | \break
-r2 ^\markup{\bold \huge Vers 2} r8 g8 b d |
-e d d16 b b8 ~ 8 a16 g ~ 4 |
-a8 b d16 b b8 ~ 8 a8 r4 |
-e'8 d d b ~ 4 a8 a ~ |
-2 r8 g8 b d |
-e d d16 b b8 ~ 8 a16 g ~ 4 |
-a8 b d16 b b8 ~ 8 a8 b8 d |
-e d d b ~ 4 a8 a ~ |
-2 r | \break
+%r2 ^\markup{\bold \huge Vers 2} r8 g8 b d |
+%e d d16 b b8 ~ 8 a16 g ~ 4 |
+%a8 b d16 b b8 ~ 8 a8 r4 |
+%e'8 d d b ~ 4 a8 a ~ |
+%2 r8 g8 b d |
+%e d d16 b b8 ~ 8 a16 g ~ 4 |
+%a8 b d16 b b8 ~ 8 a8 b8 d |
+%e d d b ~ 4 a8 a ~ |
+%2 r | \break
 r2 ^\markup{\bold \huge Chorus} r8 d e g |
 8 8 16 e g8 ~ 8 e16 d ~ 8. d16 |
 fis8 8 e16 fis g8 ~ 8 e8 r8. e16 |
 g8 8 16 e g8 ~ 8 e16 d ~ 8 b'16 b ~ |
 16 a16 4. r2 | \break
-r2 ^\markup{\bold \huge Bridge 1} r4 a16 g8. |
+r2 ^\markup{\bold \huge {Bridge 1}} r4 a16 g8. |
 c4. b a8 a8 ~ |
 4. a16 g a8 b a16 g8. |
 c4. b a8 a8 ~ |
 2 r | \break
-a8. ^\markup{\bold \huge Bridge 2} a a4 d, g8 |
+a8. ^\markup{\bold \huge {Bridge 2}} a a4 d, g8 |
 g8. fis b,4. b8 d |
 e4 d b a8 a8 ~ |
 2 r |
@@ -94,6 +95,7 @@ g8. fis b,4. b8 d |
 e4 d b a8 a8 ~ |
 2 r |
 }
+musicOneA = \transpose g a {\musicOne}
 
 choruslyric = \lyricmode {
 Du wohnst im Lob -- preis dei -- ner Söh -- _ ne, __ _ _
@@ -115,10 +117,11 @@ denn du bist für im -- mer treu. __ _
 verseTwo = \lyricmode { \set stanza = #"2. "
 Du bist der Kö -- nig al -- ler Him -- _ mel, __ _ _
 Kö -- nig mei -- nes Her -- _ zens.
-Stau -- nend steh ich __ _ vor dir. __ _
+\markup{\tiny \raise #1 \rest {8}} \markup{\tiny \raise #1 \rest {8}}
+Stau -- nend steh ich __ _ _ vor dir. __ _
 Denn es gibt kei -- nen, der dir gleich __ _ kommt. __ _ _
 Kei -- nen, der so gut __ _ ist.
-Wir ver -- eh -- ren nur dich __ _ al -- lein. __ _
+Wir ver -- eh -- ren nur dich __ _ _ al -- lein. __ _
 }
 verseOne = \lyricmode { \set stanza = #"1. "
 Ich komm mit Dank -- bar -- keit und Lob -- _ preis __ _ _
@@ -127,7 +130,7 @@ Wie ein Sie -- ger vor dei -- _ _ nen Thron. __ _
 Ich sing dir Lie -- der mei -- nes Her -- _ zens, __ _ _
 weil ich dich so lie -- _ be.
 Dir al -- lein __ _ ge -- hört __ _ all mein Lob. __ _
-\verseTwo
+%\verseTwo
 \choruslyric
 \bridgelyric
 \bridgetwolyric
@@ -188,10 +191,10 @@ originalText = \lyricmode {
 
 \score {
   <<
-    \new ChordNames {\set chordChanges = ##t \chordOne}
-    \new Voice = "one" { \global \musicOne }
+    \new ChordNames {\set chordChanges = ##t \chordOneA}
+    \new Voice = "one" { \global \musicOneA }
     \new Lyrics \lyricsto one \verseOne
-    %\new Lyrics \lyricsto one \verseTwo
+    \new Lyrics \lyricsto one \verseTwo
     %\new Lyrics \lyricsto one \verseThree
     %\new Lyrics \lyricsto one \verseFour
     %\new PianoStaff <<

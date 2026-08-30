@@ -58,7 +58,7 @@ musicOned = \relative c' {
   4. ~ 8 r8 fis |
   g4 8 4 8 |
   fis4 8 e4 8 |
-  d2. | \bar "||"
+  d2. | \bar "||" \break
   r2^\markup{\bold \huge Refrain} r8 fis |
   a4 8 4 8 |
   4 g8 fis4 e8 |
@@ -94,7 +94,7 @@ musicOne = \relative c' {
   4. ~ 8 r8 e |
   f4 8 4 8 |
   e4 8 d4 8 |
-  c2. | \bar "||"
+  c2. | \bar "||" \break
   r2^\markup{\bold \huge Refrain} r8 e |
   g4 8 4 8 |
   4 f8 e4 d8 |

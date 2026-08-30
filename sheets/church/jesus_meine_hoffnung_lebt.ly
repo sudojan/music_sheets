@@ -51,7 +51,7 @@ musicOne = \relative c' {
   cis8.( b16) 4 r cis8 b |
   a4. cis8 cis4 b |
   a2 r | \break
-  r2 ^\markup{\bold \huge Refrain} r4 a'8 gis |
+  r2 ^\markup{\bold \huge Chorus} r4 a'8 gis |
   fis4.( e8) 8 r8 e a |
   gis gis gis a a r a gis |
   fis4.( e8) 8 r8 e a |
@@ -60,7 +60,7 @@ musicOne = \relative c' {
   b cis b a a r a gis |
   a4. <cis a>8 4 <b gis> |
   a2 r | \break
-  r2 ^\markup{\bold \huge Vers 3} r8 a,8 a cis |
+  r2 ^\markup{\bold \huge {Vers 3}} r8 a,8 a cis |
   4 4 r8 a b cis |
   8.( b16) 4 r8 a cis e |
   fis4 4 r8 e e cis |

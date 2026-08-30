@@ -39,21 +39,83 @@ chordOne = \chordmode {
 
 musicOne = \relative c' {
   \partial 4. a8 b8. d16 |
-  d4 r8 a b d |
-  e4 r fis8 e16 d |
+  d4. a8 b d |
+  e2 fis8 e16 d |
   b8 fis' e4 ~ 8 d8 |
-  d4 r8 a b8. d16 |
-  d4 r8 a b d |
-  e4 r fis8 e16 d |
+  d4. a8 b8. d16 |
+  d4. a8 b d |
+  e2 fis8 e16 d |
   b8 fis' e4 ~ 8 d8 |
-  d4 r8 d fis a |
-  b4 r8 b a fis |
+  d4. d8 fis a |
+  b4. b8 a fis |
   e4. d8 d' cis |
-  b4 r8 b a fis |
+  b4. b8 a fis |
   e4. a,8 b8. d16 |
-  d4 r8 a b d |
-  e4 r fis8 e16 d |
+  d4. a8 b d |
+  e2 fis8 e16 d |
   b8 fis' e4. d8 |
+  d2. |
+}
+
+musicTwo = \relative c' {
+  \partial 4. a8 g8. b16 |
+  a4. a8 g b |
+  cis2 d8 cis16 a |
+  g8 d' cis4 ~ 8 a8 |
+  a4. a8 g8. b16 |
+  a4. a8 g b |
+  cis2 d8 cis16 a |
+  g8 d' cis4 ~ 8 a8 |
+  a4. a8 d d |
+  d4. d8 d d |
+  a4. b8 d a' |
+  g4. d8 d d |
+  cis4. a8 g8. b16 |
+  a4. a8 g b |
+  cis2 d8 cis16 a |
+  g8 d' cis4. a8 |
+  a2. |
+}
+
+musicThree = \relative c {
+  \clef bass
+  \partial 4. fis8 d8. g16 |
+  fis4. d8 d g |
+  a2 b8 a16 fis |
+  b8 a a4 ~ 8 g8 |
+  fis4. fis8 d8. g16 |
+  fis4. d8 d g |
+  a2 b8 a16 fis |
+  b8 a a4 ~ 8 g8 |
+  a4. fis8 a a |
+  b4. b8 a a |
+  e4. g8 a a |
+  d4. g,8 fis a |
+  e4. cis8 d8. g16 |
+  fis4. d8 d g |
+  a2 b8 a16 fis |
+  b8 a e4. g8 |
+  fis2. |
+}
+
+musicFour = \relative c {
+  \clef bass
+  \partial 4. d8 g,8. g16 |
+  d'4. fis,8 g g |
+  a2 b8 cis16 d |
+  g8 fis a,4 ~ 8 8 |
+  d4. d8 g,8. g16 |
+  d'4. fis,8 g g |
+  a2 b8 cis16 d |
+  g8 fis a,4 ~ 8 8 |
+  <d a>4. d8 d fis |
+  g4. g8 fis d |
+  a4. g'8 fis d |
+  g4. g,16( a) b8 b |
+  a4. a8 g8. g16 |
+  d'4. a8 g g |
+  a2 b8 cis16 d |
+  g8 fis a,4. a8 |
   d2. |
 }
 
@@ -151,13 +213,20 @@ wenn er erscheint in Herrlichkeit.
 
 
 \score {
-  <<
+  \new ChoirStaff <<
     \new ChordNames {\set chordChanges = ##t \chordOne}
-    \new Voice = "one" { \global \musicOne }
-    \new Lyrics \lyricsto one \verseOne
-    \new Lyrics \lyricsto one \verseTwo
-    \new Lyrics \lyricsto one \verseThree
-    \new Lyrics \lyricsto one \verseFour
+    \new Staff <<
+      \new Voice = "one" { \voiceOne \global \musicOne }
+      \new Voice = "two" { \voiceTwo \global \musicTwo }
+      \new Lyrics \lyricsto one \verseOne
+      \new Lyrics \lyricsto one \verseTwo
+      \new Lyrics \lyricsto one \verseThree
+      \new Lyrics \lyricsto one \verseFour
+    >>
+    \new Staff <<
+      \new Voice = "three" { \voiceOne \global \musicThree }
+      \new Voice = "four" { \voiceTwo \global \musicFour }
+    >>
     %\new PianoStaff <<
     %  \new Staff = "up" { \global \pianoUp }
     %  \new Staff = "down" { \global \pianoDown }

@@ -7,16 +7,16 @@
 }
 
 global = {
-  \key c \major
+  \key d \major
   \time 4/4
   \dynamicUp
   \set melismaBusyProperties = #'()
-  \tempo 4 = 100
+  \tempo 4 = 80
   \set Score.rehearsalMarkFormatter = #format-mark-box-numbers
 }
 \layout {indent = 0.0}
 
-chordOne = \chordmode {
+chordOneC = \chordmode {
   \set noChordSymbol = " "
   \partial 8 r8
   f2 c g a:m
@@ -28,8 +28,9 @@ chordOne = \chordmode {
   f2 a:m f4 g a2:m
   f g c1 
 }
+chordOne = \transpose c d {\chordOneC}
 
-musicOne = \relative c' {
+musicOneC = \relative c' {
   \partial 8 c8 |
   4 4 4 a8 g |
   b4 c c a |
@@ -49,6 +50,7 @@ musicOne = \relative c' {
   c d e d ~ 4 c8 c ~ |
   2 r |
 }
+musicOne = \transpose c d {\musicOneC}
 
 choruslyric = \lyricmode {
   Komm und lo -- be den Herrn,
